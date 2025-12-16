@@ -1,5 +1,6 @@
 import express from 'express';
 import { authenticate } from '../middleware/auth';
+import { apiLimiter } from '../middleware/rateLimiter';
 import { 
   getCharacter, 
   createCharacter, 
@@ -9,9 +10,9 @@ import {
 
 const router = express.Router();
 
-router.get('/', authenticate, getCharacter);
-router.post('/', authenticate, createCharacter);
-router.put('/', authenticate, updateCharacter);
-router.post('/levelup', authenticate, levelUp);
+router.get('/', apiLimiter, authenticate, getCharacter);
+router.post('/', apiLimiter, authenticate, createCharacter);
+router.put('/', apiLimiter, authenticate, updateCharacter);
+router.post('/levelup', apiLimiter, authenticate, levelUp);
 
 export default router;

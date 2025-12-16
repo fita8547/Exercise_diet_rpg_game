@@ -1,5 +1,6 @@
 import express from 'express';
 import { authenticate } from '../middleware/auth';
+import { apiLimiter } from '../middleware/rateLimiter';
 import { 
   startCombat, 
   executeTurn, 
@@ -9,9 +10,9 @@ import {
 
 const router = express.Router();
 
-router.post('/start', authenticate, startCombat);
-router.post('/:combatId/turn', authenticate, executeTurn);
-router.get('/history', authenticate, getCombatHistory);
-router.get('/current', authenticate, getCurrentCombat);
+router.post('/start', apiLimiter, authenticate, startCombat);
+router.post('/:combatId/turn', apiLimiter, authenticate, executeTurn);
+router.get('/history', apiLimiter, authenticate, getCombatHistory);
+router.get('/current', apiLimiter, authenticate, getCurrentCombat);
 
 export default router;

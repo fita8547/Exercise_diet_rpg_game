@@ -1,5 +1,6 @@
 import express from 'express';
 import { authenticate } from '../middleware/auth';
+import { activityLimiter, apiLimiter } from '../middleware/rateLimiter';
 import { 
   logActivity, 
   getActivities, 
@@ -8,8 +9,8 @@ import {
 
 const router = express.Router();
 
-router.post('/', authenticate, logActivity);
-router.get('/', authenticate, getActivities);
-router.get('/analyze', authenticate, analyzeCondition);
+router.post('/', activityLimiter, authenticate, logActivity);
+router.get('/', apiLimiter, authenticate, getActivities);
+router.get('/analyze', apiLimiter, authenticate, analyzeCondition);
 
 export default router;
