@@ -1,12 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useAuthState } from './hooks/useAuth';
 import AuthModal from './components/AuthModal';
 import RPGLocationSystem from './components/RPGLocationSystem';
+import DungeonShowcase from './components/DungeonShowcase';
 
 function App() {
   const { user, token, login, register, logout, isLoading } = useAuthState();
   const [showAuthModal, setShowAuthModal] = useState(false);
   const [demoMode, setDemoMode] = useState(false);
+  const [showDungeonShowcase, setShowDungeonShowcase] = useState(false);
 
   if (isLoading) {
     return (
@@ -39,6 +41,39 @@ function App() {
     setDemoMode(true);
   };
 
+  const handleAdminLogin = async () => {
+    try {
+      await login('junsu', 'sungo8547!');
+    } catch (error) {
+      console.error('관리자 로그인 실패:', error);
+      alert('관리자 로그인에 실패했습니다. 서버가 실행 중인지 확인해주세요.');
+    }
+  };
+
+  // 관리자 로그인 체크
+  useEffect(() => {
+    const adminLogin = localStorage.getItem('adminLogin');
+    if (adminLogin === 'true') {
+      localStorage.removeItem('adminLogin');
+      handleAdminLogin();
+    }
+  }, []);
+
+  // 던전 쇼케이스 표시
+  if (showDungeonShowcase) {
+    return (
+      <div className="relative">
+        <button
+          onClick={() => setShowDungeonShowcase(false)}
+          className="fixed top-4 right-4 z-50 bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded-lg"
+        >
+          ← 돌아가기
+        </button>
+        <DungeonShowcase />
+      </div>
+    );
+  }
+
   if (!user && !token && !demoMode) {
     return (
       <>
@@ -69,6 +104,13 @@ function App() {
                 >
                   계정으로 시작하기
                 </button>
+                <button
+                  onClick={() => setShowDungeonShowcase(true)}
+                  className="w-full bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-6 rounded-lg flex items-center justify-center gap-2"
+                >
+                  🏰 전체 던전 보기 👑
+                </button>
+
               </div>
             </div>
             

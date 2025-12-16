@@ -34,6 +34,52 @@ const workoutLogs = new Map();
 const locationLogs = new Map();
 const battleLogs = new Map();
 
+// 관리자 계정 자동 생성
+const createAdminAccount = () => {
+  const adminId = 'admin_junsu';
+  const adminEmail = 'junsu';
+  const adminPassword = 'sungo8547!';
+  
+  if (!users.has(adminId)) {
+    const hashedPassword = bcrypt.hashSync(adminPassword, 10);
+    
+    // 관리자 유저 생성
+    users.set(adminId, {
+      id: adminId,
+      email: adminEmail,
+      password: hashedPassword,
+      isAdmin: true,
+      createdAt: new Date()
+    });
+    
+    // 관리자 캐릭터 생성 (모든 던전 접근 가능)
+    characters.set(adminId, {
+      userId: adminId,
+      level: 100,
+      exp: 999999,
+      totalWalkTime: 10000, // 10000분 (166시간) 걷기 완료
+      totalDistance: 800000, // 800km 걷기 완료
+      stats: {
+        hp: 5000,
+        maxHp: 5000,
+        attack: 500,
+        defense: 300,
+        stamina: 1000
+      },
+      currentRegion: 'region_9_9',
+      lastActiveDate: new Date(),
+      playStyle: 'admin'
+    });
+    
+    console.log('🔑 관리자 계정이 생성되었습니다:');
+    console.log('   ID: junsu');
+    console.log('   PW: sungo8547!');
+    console.log('   isAdmin:', true);
+    console.log('   레벨:', 100);
+    console.log('   모든 던전 접근 가능');
+  }
+};
+
 // 던전 데이터
 const dungeons = [
   // 초급 던전 (레벨 1-10)
@@ -42,6 +88,8 @@ const dungeons = [
     name: '고블린 동굴',
     regionId: 'region_9_9',
     requiredLevel: 1,
+    requiredWalkTime: 0, // 분 단위
+    requiredDistance: 0, // 미터 단위
     monsterStats: { hp: 50, attack: 8, defense: 2 },
     expReward: 25,
     difficulty: 'easy',
@@ -547,22 +595,40 @@ app.get('/api/location/region/current', authenticateToken, (req, res) => {
 app.get('/api/battle/dungeons', authenticateToken, (req, res) => {
   try {
     const character = characters.get(req.user.id);
-    const regionDungeons = dungeons.filter(d => d.regionId === character.currentRegion);
+    
+    // 관리자는 모든 던전을 볼 수 있음, 일반 사용자는 현재 지역의 던전만
+    const isAdmin = req.user.isAdmin === true || req.user.email === 'junsu';
+    const availableDungeons = isAdmin 
+      ? dungeons 
+      : dungeons.filter(d => d.regionId === character.currentRegion);
+
+    console.log('🏰 던전 API 호출:');
+    console.log('   사용자 ID:', req.user.id);
+    console.log('   사용자 이메일:', req.user.email);
+    console.log('   관리자 여부:', req.user.isAdmin);
+    console.log('   최종 관리자 판정:', isAdmin);
+    console.log('   캐릭터 레벨:', character.level);
+    console.log('   현재 지역:', character.currentRegion);
+    console.log('   사용 가능한 던전 수:', availableDungeons.length);
 
     res.json({
       currentRegion: character.currentRegion,
-      dungeons: regionDungeons.map(d => ({
-        dungeonId: d.dungeonId,
-        name: d.name,
-        requiredLevel: d.requiredLevel,
-        monsterStats: d.monsterStats,
-        expReward: d.expReward,
-        difficulty: d.difficulty,
-        bossType: d.bossType,
-        isLegendary: d.isLegendary,
-        description: d.description,
-        canEnter: character.level >= d.requiredLevel
-      }))
+      dungeons: availableDungeons.map(d => {
+        const canEnter = isAdmin || character.level >= d.requiredLevel;
+        console.log(`   던전 ${d.name}: canEnter=${canEnter} (관리자=${req.user.isAdmin}, 레벨=${character.level}>=${d.requiredLevel})`);
+        return {
+          dungeonId: d.dungeonId,
+          name: d.name,
+          requiredLevel: d.requiredLevel,
+          monsterStats: d.monsterStats,
+          expReward: d.expReward,
+          difficulty: d.difficulty,
+          bossType: d.bossType,
+          isLegendary: d.isLegendary,
+          description: d.description,
+          canEnter
+        };
+      })
     });
   } catch (error) {
     res.status(500).json({ error: error.message });
@@ -580,7 +646,8 @@ app.post('/api/battle/start', authenticateToken, (req, res) => {
       return res.status(404).json({ error: '던전을 찾을 수 없습니다.' });
     }
 
-    if (character.level < dungeon.requiredLevel) {
+    const isAdmin = req.user.isAdmin === true || req.user.email === 'junsu';
+    if (!isAdmin && character.level < dungeon.requiredLevel) {
       return res.status(400).json({ error: `레벨 ${dungeon.requiredLevel} 이상 필요합니다.` });
     }
 
@@ -803,6 +870,9 @@ const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
   console.log(`개발 서버가 포트 ${PORT}에서 실행 중입니다.`);
   console.log('메모리 내 데이터베이스를 사용합니다.');
+  
+  // 관리자 계정 생성
+  createAdminAccount();
 });
 
 module.exports = app;

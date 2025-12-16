@@ -7,6 +7,7 @@ import { Character } from '../types';
 import AIBodyAnalysis from './AIBodyAnalysis';
 import BattleSystem from './BattleSystem';
 import GameMap from './GameMap';
+import DungeonShowcase from './DungeonShowcase';
 
 interface RPGLocationSystemProps {
   onLogout: () => void;
@@ -62,6 +63,8 @@ const RPGLocationSystem: React.FC<RPGLocationSystemProps> = ({ onLogout, userEma
   const [encounterGauge, setEncounterGauge] = useState(0);
   const [randomEncounter, setRandomEncounter] = useState<any>(null);
   const [showRandomBattle, setShowRandomBattle] = useState(false);
+  const [showDungeonShowcase, setShowDungeonShowcase] = useState(false);
+  const [adminClickCount, setAdminClickCount] = useState(0);
 
   // 서버에서 캐릭터 정보 가져오기
   useEffect(() => {
@@ -245,6 +248,20 @@ const RPGLocationSystem: React.FC<RPGLocationSystemProps> = ({ onLogout, userEma
     setShowBattle(true);
   };
 
+  const handleAdminClick = () => {
+    const newCount = adminClickCount + 1;
+    setAdminClickCount(newCount);
+    
+    if (newCount >= 3) {
+      // 관리자 로그인 시도
+      window.location.reload(); // 페이지 새로고침으로 로그인 화면으로 이동
+      localStorage.setItem('adminLogin', 'true');
+    }
+    
+    // 3초 후 카운트 리셋
+    setTimeout(() => setAdminClickCount(0), 3000);
+  };
+
   const handleBattleEnd = (result: { result: 'win' | 'lose'; expGained: number }) => {
     setShowBattle(false);
     setShowRandomBattle(false);
@@ -309,6 +326,21 @@ const RPGLocationSystem: React.FC<RPGLocationSystemProps> = ({ onLogout, userEma
     );
   }
 
+  // 던전 쇼케이스 표시
+  if (showDungeonShowcase) {
+    return (
+      <div className="relative">
+        <button
+          onClick={() => setShowDungeonShowcase(false)}
+          className="fixed top-4 right-4 z-50 bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded-lg"
+        >
+          ← 게임으로 돌아가기
+        </button>
+        <DungeonShowcase />
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-yellow-50 p-4">
       {/* 권한 요청 모달 */}
@@ -364,17 +396,32 @@ const RPGLocationSystem: React.FC<RPGLocationSystemProps> = ({ onLogout, userEma
             <div className="flex items-center gap-3">
               <Swords className="w-8 h-8" />
               <div>
-                <h1 className="text-3xl font-bold text-black">워킹 RPG 어드벤처</h1>
+                <h1 
+                  className="text-3xl font-bold text-black cursor-pointer select-none"
+                  onClick={handleAdminClick}
+                  title={adminClickCount > 0 ? `관리자 모드 ${3 - adminClickCount}번 더 클릭` : ''}
+                >
+                  워킹 RPG 어드벤처
+                </h1>
                 <p className="text-black text-sm">{userEmail}</p>
               </div>
             </div>
-            <button
-              onClick={onLogout}
-              className="bg-yellow-600 hover:bg-yellow-700 text-white p-2 rounded"
-              title="로그아웃"
-            >
-              <LogOut className="w-5 h-5" />
-            </button>
+            <div className="flex gap-2">
+              <button
+                onClick={() => setShowDungeonShowcase(true)}
+                className="bg-purple-600 hover:bg-purple-700 text-white p-2 rounded"
+                title="전체 던전 보기"
+              >
+                <Crown className="w-5 h-5" />
+              </button>
+              <button
+                onClick={onLogout}
+                className="bg-yellow-600 hover:bg-yellow-700 text-white p-2 rounded"
+                title="로그아웃"
+              >
+                <LogOut className="w-5 h-5" />
+              </button>
+            </div>
           </div>
           <p className="text-black">걸으면서 레벨업하고 강해지는 운동 RPG!</p>
         </div>
