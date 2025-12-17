@@ -1,5 +1,9 @@
 package com.rpgworkout.controller;
 
+import com.rpgworkout.service.QuestService;
+import com.rpgworkout.service.ItemService;
+import com.rpgworkout.service.AchievementService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.Map;
 import java.util.HashMap;
@@ -8,6 +12,15 @@ import java.util.HashMap;
 @RequestMapping("/api")
 @CrossOrigin(origins = "*")
 public class TestController {
+    
+    @Autowired
+    private QuestService questService;
+    
+    @Autowired
+    private ItemService itemService;
+    
+    @Autowired
+    private AchievementService achievementService;
     
     @GetMapping("/test")
     public Map<String, Object> test() {
@@ -219,7 +232,15 @@ public class TestController {
         Map<String, Object> response = new HashMap<>();
         
         double newDistance = ((Number) request.get("distance")).doubleValue();
+        String userEmail = (String) request.getOrDefault("userEmail", "test@test.com");
+        
         globalWalkDistance += newDistance; // 누적
+        
+        // 퀘스트 진행도 업데이트
+        questService.updateQuestProgress(userEmail, "walk", (int) newDistance);
+        
+        // 업적 진행도 업데이트
+        achievementService.updateAchievementProgress(userEmail, "walk", (int) newDistance);
         
         response.put("message", "걷기 거리가 업데이트되었습니다");
         response.put("totalWalkDistance", globalWalkDistance);
@@ -337,6 +358,60 @@ public class TestController {
         response.put("levelRanking", levelRanking);
         response.put("walkRanking", walkRanking);
         response.put("walkingExpRanking", coinRanking); // 걷기 경험치 랭킹으로 변경
+        
+        return response;
+    }
+    
+    // 대시보드 API - 모든 정보를 한 번에
+    @GetMapping("/dashboard")
+    public Map<String, Object> getDashboard(@RequestParam(defaultValue = "test@test.com") String userEmail) {
+        Map<String, Object> response = new HashMap<>();
+        
+        // 캐릭터 정보
+        response.put("character", getCharacter().get("character"));
+        
+        // 퀘스트 정보
+        response.put("activeQuests", questService.getActiveQuests(userEmail));
+        response.put("questStats", Map.of(
+            "totalActive", questService.getActiveQuests(userEmail).size(),
+            "totalCompleted", questService.getCompletedQuests(userEmail).size()
+        ));
+        
+        // 업적 정보
+        response.put("recentAchievements", achievementService.getRecentCompletedAchievements(userEmail));
+        response.put("achievementStats", achievementService.getAchievementStats(userEmail));
+        
+        // 인벤토리 정보
+        response.put("inventorySlots", Map.of(
+            "used", itemService.getUsedSlots(userEmail),
+            "max", itemService.getMaxSlots(1) // 레벨 1 기준
+        ));
+        
+        // 걷기 경험치
+        response.put("walkingExp", (int)(globalWalkDistance / 10));
+        
+        return response;
+    }
+    
+    // 사용자 초기화 API (새 사용자용)
+    @PostMapping("/user/initialize")
+    public Map<String, Object> initializeUser(@RequestBody Map<String, Object> request) {
+        String userEmail = (String) request.getOrDefault("userEmail", "test@test.com");
+        
+        // 퀘스트 초기화
+        questService.initializeMainQuests(userEmail);
+        questService.generateDailyQuests(userEmail, 1);
+        
+        // 업적 초기화
+        achievementService.initializeUserAchievements(userEmail);
+        
+        // 시작 아이템 지급
+        itemService.addItem(userEmail, "health_potion", 5);
+        itemService.addItem(userEmail, "energy_drink", 1);
+        
+        Map<String, Object> response = new HashMap<>();
+        response.put("message", "사용자가 초기화되었습니다");
+        response.put("dashboard", getDashboard(userEmail));
         
         return response;
     }

@@ -1,2 +1,14 @@
-com/rpgworkout/RpgWorkoutApplication.class
+com/rpgworkout/controller/AchievementController.class
+com/rpgworkout/service/AchievementService.class
+com/rpgworkout/controller/QuestController.class
+com/rpgworkout/model/Quest.class
+com/rpgworkout/controller/ItemController.class
+com/rpgworkout/model/Achievement.class
+com/rpgworkout/service/QuestService.class
+com/rpgworkout/model/Item$ItemEffect.class
 com/rpgworkout/controller/TestController.class
+com/rpgworkout/model/Item.class
+com/rpgworkout/service/ItemService.class
+com/rpgworkout/model/Quest$QuestReward.class
+com/rpgworkout/model/Achievement$AchievementReward.class
+com/rpgworkout/RpgWorkoutApplication.class
