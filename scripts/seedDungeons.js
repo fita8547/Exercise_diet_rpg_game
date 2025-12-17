@@ -177,7 +177,7 @@ const dungeons = [
     name: '전쟁신의 투기장',
     regionId: 'region_1_1',
     requiredLevel: 70,
-    monsterStats: { hp: 3000, attack: 200, defense: 70 },
+    monsterStats: { hp: 5000, attack: 350, defense: 120 },
     expReward: 12000,
     difficulty: 'nightmare',
     bossType: 'god_of_war',
@@ -188,7 +188,7 @@ const dungeons = [
     name: '공허군주의 차원',
     regionId: 'region_20_20',
     requiredLevel: 80,
-    monsterStats: { hp: 3500, attack: 220, defense: 80 },
+    monsterStats: { hp: 6000, attack: 400, defense: 140 },
     expReward: 15000,
     difficulty: 'nightmare',
     bossType: 'void_lord',
@@ -199,7 +199,7 @@ const dungeons = [
     name: '혼돈황제의 궁전',
     regionId: 'region_25_25',
     requiredLevel: 90,
-    monsterStats: { hp: 4000, attack: 250, defense: 90 },
+    monsterStats: { hp: 8000, attack: 450, defense: 160 },
     expReward: 20000,
     difficulty: 'nightmare',
     bossType: 'chaos_emperor',
@@ -210,12 +210,12 @@ const dungeons = [
     name: '무한야수의 영역',
     regionId: 'region_50_50',
     requiredLevel: 100,
-    monsterStats: { hp: 5000, attack: 300, defense: 100 },
+    monsterStats: { hp: 10000, attack: 500, defense: 200 },
     expReward: 50000,
     difficulty: 'nightmare',
     bossType: 'infinity_beast',
     isLegendary: true,
-    description: '전설 속에서만 존재한다는 궁극의 던전. 아무도 클리어한 적이 없다.'
+    description: '전설 속에서만 존재한다는 궁극의 던전 - 무한의 힘을 가진 야수'
   }
 ];
 

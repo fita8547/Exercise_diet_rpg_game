@@ -68,11 +68,16 @@ export const useLocationTracker = () => {
     try {
       setIsSubmitting(true);
       
-      // 오프라인 모드 체크
-      const isOffline = !navigator.onLine || localStorage.getItem('demoMode') === 'true';
+      // 오프라인 모드 체크 (데모 계정 제외)
+      const userEmail = localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')!).email : '';
+      const isOffline = !navigator.onLine || userEmail === 'demo@demo.com';
       
       if (!isOffline) {
-        await workoutAPI.submitWorkout('walk', Math.floor(distance));
+        // 걷기 운동 기록과 위치 업데이트를 동시에 수행
+        await Promise.all([
+          workoutAPI.submitWorkout('walk', Math.floor(distance)),
+          locationAPI.updateWalkDistance(Math.floor(distance))
+        ]);
       }
       
       console.log(`걷기 운동 기록: ${Math.floor(distance)}m ${isOffline ? '(오프라인)' : '(온라인)'}`);
@@ -91,6 +96,7 @@ export const useLocationTracker = () => {
 
     setError(null);
     setIsTracking(true);
+    localStorage.setItem('isTracking', 'true'); // 추적 상태 저장
 
     const options: PositionOptions = {
       enableHighAccuracy: true,
@@ -182,6 +188,7 @@ export const useLocationTracker = () => {
     }
     
     setIsTracking(false);
+    localStorage.setItem('isTracking', 'false'); // 추적 상태 저장
   }, [submitWalkingExercise]);
 
   const resetDistance = useCallback(() => {

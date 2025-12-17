@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { AuthResponse, Character, WorkoutResponse, LocationData } from '../types';
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000/api';
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001/api';
 
 const api = axios.create({
   baseURL: API_BASE_URL,
@@ -47,6 +47,9 @@ export const workoutAPI = {
 export const locationAPI = {
   updateLocation: (location: LocationData): Promise<any> =>
     api.post('/location', location).then(res => res.data),
+  
+  updateWalkDistance: (distance: number, duration?: number): Promise<any> =>
+    api.post('/location/update', { distance, duration }).then(res => res.data),
   
   getCurrentRegion: (): Promise<{ currentRegion: string }> =>
     api.get('/location/region/current').then(res => res.data),
@@ -101,6 +104,9 @@ export const encounterAPI = {
 
 // 전투 API
 export const battleAPI = {
+  getDungeons: (): Promise<any> =>
+    api.get('/battle/dungeons').then(res => res.data),
+  
   startBattle: (monster: any): Promise<any> =>
     api.post('/battle/start', { monster }).then(res => res.data),
   
@@ -115,6 +121,24 @@ export const battleAPI = {
   
   getBattleHistory: (limit?: number, offset?: number): Promise<any> =>
     api.get('/battle/history', { params: { limit, offset } }).then(res => res.data),
+};
+
+// 랭킹 시스템
+export const rankingAPI = {
+  getRanking: (): Promise<any> =>
+    api.get('/ranking').then(res => res.data),
+};
+
+// 코스튬 시스템
+export const costumeAPI = {
+  getCostumes: (): Promise<any> =>
+    api.get('/costumes').then(res => res.data),
+  
+  purchaseCostume: (costumeId: string): Promise<any> =>
+    api.post('/costumes/purchase', { costumeId }).then(res => res.data),
+  
+  equipCostume: (costumeId: string, action: 'equip' | 'unequip'): Promise<any> =>
+    api.post('/costumes/equip', { costumeId, action }).then(res => res.data),
 };
 
 export default api;

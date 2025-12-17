@@ -1,6 +1,9 @@
 export interface User {
   id: string;
   email: string;
+  isAdmin?: boolean;
+  createdAt?: string;
+  lastLoginAt?: string;
 }
 
 export interface Character {
@@ -15,6 +18,15 @@ export interface Character {
   };
   currentRegion: string;
   lastActiveDate: string;
+  totalWalkDistance?: number;
+  totalWalkTime?: number;
+  coins?: number;
+  equippedCostumes?: {
+    head?: string;
+    body?: string;
+    weapon?: string;
+    accessory?: string;
+  };
 }
 
 export interface WorkoutLog {

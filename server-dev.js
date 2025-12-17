@@ -260,48 +260,48 @@ const dungeons = [
     name: '전쟁신의 투기장',
     regionId: 'region_1_1',
     requiredLevel: 70,
-    monsterStats: { hp: 3000, attack: 200, defense: 70 },
+    monsterStats: { hp: 5000, attack: 350, defense: 120 },
     expReward: 12000,
     difficulty: 'nightmare',
     bossType: 'god_of_war',
     isLegendary: true,
-    description: '전쟁의 신이 직접 상대하는 신성한 투기장'
+    description: '전쟁의 신이 직접 상대하는 신성한 투기장 - 절대적 강자'
   },
   {
     dungeonId: 'void_lord_dimension',
     name: '공허군주의 차원',
     regionId: 'region_20_20',
     requiredLevel: 80,
-    monsterStats: { hp: 3500, attack: 220, defense: 80 },
+    monsterStats: { hp: 6000, attack: 400, defense: 140 },
     expReward: 15000,
     difficulty: 'nightmare',
     bossType: 'void_lord',
     isLegendary: true,
-    description: '공허의 군주가 지배하는 무의 차원'
+    description: '공허의 군주가 지배하는 무의 차원 - 현실을 초월한 존재'
   },
   {
     dungeonId: 'chaos_emperor_palace',
     name: '혼돈황제의 궁전',
     regionId: 'region_25_25',
     requiredLevel: 90,
-    monsterStats: { hp: 4000, attack: 250, defense: 90 },
+    monsterStats: { hp: 8000, attack: 450, defense: 160 },
     expReward: 20000,
     difficulty: 'nightmare',
     bossType: 'chaos_emperor',
     isLegendary: true,
-    description: '혼돈의 황제가 현실을 왜곡시키는 궁전'
+    description: '혼돈의 황제가 현실을 왜곡시키는 궁전 - 질서의 파괴자'
   },
   {
     dungeonId: 'infinity_beast_realm',
     name: '무한야수의 영역',
     regionId: 'region_50_50',
     requiredLevel: 100,
-    monsterStats: { hp: 5000, attack: 300, defense: 100 },
+    monsterStats: { hp: 10000, attack: 500, defense: 200 },
     expReward: 50000,
     difficulty: 'nightmare',
     bossType: 'infinity_beast',
     isLegendary: true,
-    description: '전설 속에서만 존재한다는 궁극의 던전. 아무도 클리어한 적이 없다.'
+    description: '전설 속에서만 존재한다는 궁극의 던전 - 무한의 힘을 가진 야수'
   }
 ];
 
@@ -597,10 +597,16 @@ app.get('/api/battle/dungeons', authenticateToken, (req, res) => {
     const character = characters.get(req.user.id);
     
     // 관리자는 모든 던전을 볼 수 있음, 일반 사용자는 현재 지역의 던전만
-    const isAdmin = req.user.isAdmin === true || req.user.email === 'junsu';
+    const isAdmin = req.user.isAdmin === true || req.user.email === 'junsu' || req.user.id === 'admin_junsu';
     const availableDungeons = isAdmin 
       ? dungeons 
       : dungeons.filter(d => d.regionId === character.currentRegion);
+
+    console.log('🔍 관리자 체크:');
+    console.log('   req.user.isAdmin:', req.user.isAdmin);
+    console.log('   req.user.email:', req.user.email);
+    console.log('   req.user.id:', req.user.id);
+    console.log('   최종 isAdmin:', isAdmin);
 
     console.log('🏰 던전 API 호출:');
     console.log('   사용자 ID:', req.user.id);

@@ -65,6 +65,27 @@ const characterSchema = new mongoose.Schema({
   lastStyleUpdate: {
     type: Date,
     default: null
+  },
+  totalWalkDistance: {
+    type: Number,
+    default: 0,
+    min: 0
+  },
+  totalWalkTime: {
+    type: Number,
+    default: 0,
+    min: 0
+  },
+  coins: {
+    type: Number,
+    default: 100,
+    min: 0
+  },
+  equippedCostumes: {
+    head: { type: String, default: null },
+    body: { type: String, default: null },
+    weapon: { type: String, default: null },
+    accessory: { type: String, default: null }
   }
 });
 

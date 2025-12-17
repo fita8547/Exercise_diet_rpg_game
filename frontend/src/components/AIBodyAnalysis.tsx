@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Brain, Activity, Target, TrendingUp, Zap } from 'lucide-react';
+import { Brain, Activity, Target, Zap } from 'lucide-react';
 import { aiAPI } from '../services/api';
 
 interface BodyAnalysisData {
@@ -37,7 +37,6 @@ const AIBodyAnalysis: React.FC<AIBodyAnalysisProps> = ({ onAnalysisComplete, onC
   const [isAnalyzing, setIsAnalyzing] = useState(false);
 
   const analyzeBodyType = (data: BodyAnalysisData): AnalysisResult => {
-    const bmi = data.weight / ((data.height / 100) ** 2);
     
     // AI 분석 로직 (체중 우열 판단 없이 상태 유형만 분류)
     let bodyType: AnalysisResult['bodyType'] = 'warrior';
@@ -117,15 +116,7 @@ const AIBodyAnalysis: React.FC<AIBodyAnalysisProps> = ({ onAnalysisComplete, onC
     }
   };
 
-  const getBodyTypeIcon = (type: string) => {
-    switch (type) {
-      case 'warrior': return '⚔️';
-      case 'mage': return '🔮';
-      case 'archer': return '🏹';
-      case 'paladin': return '🛡️';
-      default: return '⚔️';
-    }
-  };
+
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">

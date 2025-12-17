@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { Swords, Play, Pause, AlertCircle, Trophy, Zap, Heart, Shield, LogOut, Brain, Crown } from 'lucide-react';
+import { Swords, Play, Pause, AlertCircle, Trophy, Zap, Heart, Shield, LogOut, Brain, Crown, ShoppingBag, Medal } from 'lucide-react';
 import { useLocationTracker } from '../hooks/useLocationTracker';
-import { characterAPI, encounterAPI } from '../services/api';
+import { characterAPI, encounterAPI, battleAPI } from '../services/api';
 import { Character } from '../types';
-// import SimpleMap from './SimpleMap'; // GameMap으로 대체
 import AIBodyAnalysis from './AIBodyAnalysis';
 import BattleSystem from './BattleSystem';
 import GameMap from './GameMap';
 import DungeonShowcase from './DungeonShowcase';
+import CostumeShop from './CostumeShop';
+import Ranking from './Ranking';
 
 interface RPGLocationSystemProps {
   onLogout: () => void;
@@ -42,7 +43,6 @@ const RPGLocationSystem: React.FC<RPGLocationSystemProps> = ({ onLogout, userEma
   const {
     isTracking,
     permission,
-    currentPosition,
     totalDistance,
     error,
     isSubmitting,
@@ -64,22 +64,33 @@ const RPGLocationSystem: React.FC<RPGLocationSystemProps> = ({ onLogout, userEma
   const [randomEncounter, setRandomEncounter] = useState<any>(null);
   const [showRandomBattle, setShowRandomBattle] = useState(false);
   const [showDungeonShowcase, setShowDungeonShowcase] = useState(false);
-  const [adminClickCount, setAdminClickCount] = useState(0);
+  const [showCostumeShop, setShowCostumeShop] = useState(false);
+  const [showRanking, setShowRanking] = useState(false);
+  const [showDungeonList, setShowDungeonList] = useState(false);
+
+  const [showLoginPrompt, setShowLoginPrompt] = useState(false);
 
   // 서버에서 캐릭터 정보 가져오기
   useEffect(() => {
     const fetchCharacter = async () => {
       try {
-        if (userEmail === 'demo@offline.local') {
-          const savedCharacter = localStorage.getItem('demoCharacter');
-          const savedAnalysis = localStorage.getItem('bodyAnalysis');
-          
-          if (savedCharacter) {
-            setCharacter(JSON.parse(savedCharacter));
-          }
-          if (savedAnalysis) {
-            setBodyAnalysisResult(JSON.parse(savedAnalysis));
-          }
+        const isDemoAccount = userEmail === 'demo@demo.com';
+        if (isDemoAccount) {
+          // 데모 계정용 기본 캐릭터 생성
+          const demoCharacter: Character = {
+            level: 1,
+            exp: 0,
+            requiredExp: 100,
+            currentRegion: 'demo_region',
+            lastActiveDate: new Date().toISOString(),
+            stats: {
+              hp: 100,
+              attack: 10,
+              defense: 5,
+              stamina: 50
+            }
+          };
+          setCharacter(demoCharacter);
           setIsLoadingCharacter(false);
           return;
         }
@@ -96,37 +107,93 @@ const RPGLocationSystem: React.FC<RPGLocationSystemProps> = ({ onLogout, userEma
     fetchCharacter();
   }, [userEmail]);
 
+  // 캐릭터 정보 새로고침 (걸은 거리 업데이트 시)
+  const refreshCharacter = async () => {
+    if (userEmail === 'demo@demo.com') return;
+    
+    try {
+      const response = await characterAPI.getCharacter();
+      setCharacter(response.character);
+    } catch (error) {
+      console.error('캐릭터 정보 새로고침 실패:', error);
+    }
+  };
+
+  // 걸은 거리가 변경될 때마다 캐릭터 정보 새로고침
+  useEffect(() => {
+    console.log(`🚶 현재 세션 걸은 거리: ${totalDistance}m`);
+    console.log(`🏃 총 걸은 거리: ${(character?.totalWalkDistance || 0) + totalDistance}m`);
+    
+    if (totalDistance > 0 && totalDistance % 100 === 0) { // 100m마다
+      console.log('🔄 100m 달성! 캐릭터 정보 새로고침 예약');
+      setTimeout(() => refreshCharacter(), 2000); // 2초 후 새로고침
+    }
+  }, [totalDistance, userEmail]);
+
   // 던전 정보 로드
   useEffect(() => {
-    const mockDungeons = [
-      {
-        dungeonId: 'goblin_cave_1',
-        name: '고블린 동굴',
-        requiredLevel: 1,
-        monsterStats: { hp: 50, attack: 8, defense: 2 },
-        expReward: 25,
-        canEnter: true
-      },
-      {
-        dungeonId: 'orc_fortress_1',
-        name: '오크 요새',
-        requiredLevel: 3,
-        monsterStats: { hp: 120, attack: 15, defense: 5 },
-        expReward: 75,
-        canEnter: (character?.level || 1) >= 3
+    const loadDungeons = async () => {
+      console.log('🔍 던전 로딩 시작 - userEmail:', userEmail);
+      console.log('🔍 현재 토큰:', localStorage.getItem('token') ? '있음' : '없음');
+      const isDemoAccount = userEmail === 'demo@demo.com';
+      console.log('🔍 데모 계정 여부:', isDemoAccount);
+      
+      if (isDemoAccount) {
+        // 데모 계정 - 고블린 동굴만 열어주고 나머지는 로그인 필요
+        const demoDungeons = [
+          // 고블린 동굴만 접근 가능
+          { dungeonId: 'goblin_cave_1', name: '고블린 동굴', requiredLevel: 1, requiredDistance: 0, monsterStats: { hp: 50, attack: 8, defense: 2 }, expReward: 25, canEnter: true, difficulty: 'easy', bossType: 'goblin' },
+          
+          // 나머지는 로그인 필요
+          { dungeonId: 'slime_forest_1', name: '슬라임 숲', requiredLevel: 1, requiredDistance: 400, monsterStats: { hp: 30, attack: 5, defense: 1 }, expReward: 15, canEnter: false, difficulty: 'easy', bossType: 'spider', needsLogin: true },
+          { dungeonId: 'orc_fortress_1', name: '오크 요새', requiredLevel: 3, requiredDistance: 800, monsterStats: { hp: 120, attack: 15, defense: 5 }, expReward: 75, canEnter: false, difficulty: 'normal', bossType: 'orc', needsLogin: true },
+          { dungeonId: 'skeleton_tomb_1', name: '해골 무덤', requiredLevel: 5, requiredDistance: 1200, monsterStats: { hp: 200, attack: 25, defense: 8 }, expReward: 150, canEnter: false, difficulty: 'normal', bossType: 'skeleton', needsLogin: true },
+          { dungeonId: 'wolf_den_1', name: '늑대 굴', requiredLevel: 4, requiredDistance: 1000, monsterStats: { hp: 150, attack: 20, defense: 3 }, expReward: 100, canEnter: false, difficulty: 'normal', bossType: 'wolf', needsLogin: true },
+          { dungeonId: 'troll_bridge_1', name: '트롤 다리', requiredLevel: 8, requiredDistance: 2000, monsterStats: { hp: 300, attack: 35, defense: 12 }, expReward: 200, canEnter: false, difficulty: 'hard', bossType: 'troll', needsLogin: true }
+        ];
+        console.log('🎮 데모 계정: 고블린 동굴만 접근 가능, 나머지는 로그인 필요');
+        console.log('🎮 데모 던전 수:', demoDungeons.length);
+        setNearbyDungeons(demoDungeons);
+        return;
       }
-    ];
-    setNearbyDungeons(mockDungeons);
-  }, [character]);
+
+      // 서버에서 던전 정보 가져오기 (모든 던전 표시, 걷기 거리 기준 잠금)
+      try {
+        console.log('🌐 서버에서 던전 정보 요청 중...');
+        const response = await battleAPI.getDungeons();
+        console.log('🏰 서버 응답:', response);
+        console.log('🏰 서버에서 받은 던전 수:', response.dungeons?.length || 0);
+        console.log('🚶 총 걸은 거리:', response.totalWalkDistance || 0, 'm');
+        
+        if (response.dungeons && Array.isArray(response.dungeons)) {
+          setNearbyDungeons(response.dungeons);
+          console.log('✅ 던전 목록 설정 완료:', response.dungeons.length, '개');
+        } else {
+          console.error('❌ 던전 데이터가 올바르지 않음:', response);
+          setNearbyDungeons([]);
+        }
+      } catch (error) {
+        console.error('❌ 던전 정보 로드 실패:', error);
+        // 서버 연결 실패 시 기본 던전들 표시
+        const fallbackDungeons = [
+          { dungeonId: 'goblin_cave_1', name: '고블린 동굴', requiredLevel: 1, requiredDistance: 0, monsterStats: { hp: 50, attack: 8, defense: 2 }, expReward: 25, canEnter: true },
+          { dungeonId: 'orc_fortress_1', name: '오크 요새', requiredLevel: 3, requiredDistance: 800, monsterStats: { hp: 120, attack: 15, defense: 5 }, expReward: 75, canEnter: false }
+        ];
+        console.log('🔄 폴백 던전 사용:', fallbackDungeons.length, '개');
+        setNearbyDungeons(fallbackDungeons);
+      }
+    };
+
+    loadDungeons();
+  }, [userEmail]);
 
   // 조우 게이지 로드
   useEffect(() => {
     const loadEncounterGauge = async () => {
-      if (userEmail === 'demo@offline.local') {
-        const savedGauge = localStorage.getItem('encounterGauge');
-        if (savedGauge) {
-          setEncounterGauge(parseInt(savedGauge));
-        }
+      const isDemoAccount = userEmail === 'demo@demo.com';
+      if (isDemoAccount) {
+        // 데모 계정은 기본 게이지 0으로 시작
+        setEncounterGauge(0);
         return;
       }
 
@@ -145,11 +212,11 @@ const RPGLocationSystem: React.FC<RPGLocationSystemProps> = ({ onLogout, userEma
   useEffect(() => {
     const checkEncounter = async () => {
       if (totalDistance > 0 && totalDistance % 100 === 0) { // 100m마다 체크
-        if (userEmail === 'demo@offline.local') {
+        const isDemoAccount = userEmail === 'demo@demo.com';
+        if (isDemoAccount) {
           // 오프라인 모드
           const newGauge = Math.min(100, encounterGauge + 10);
           setEncounterGauge(newGauge);
-          localStorage.setItem('encounterGauge', newGauge.toString());
           
           if (newGauge >= 100) {
             // 랜덤 몬스터 조우
@@ -162,7 +229,6 @@ const RPGLocationSystem: React.FC<RPGLocationSystemProps> = ({ onLogout, userEma
             setRandomEncounter(monster);
             setShowRandomBattle(true);
             setEncounterGauge(0);
-            localStorage.setItem('encounterGauge', '0');
           }
           return;
         }
@@ -224,9 +290,9 @@ const RPGLocationSystem: React.FC<RPGLocationSystemProps> = ({ onLogout, userEma
     setBodyAnalysisResult(result);
     setShowAIAnalysis(false);
     
-    if (userEmail === 'demo@offline.local') {
-      localStorage.setItem('bodyAnalysis', JSON.stringify(result));
-      
+    const isDemoAccount = userEmail === 'demo@demo.com';
+    if (isDemoAccount) {
+      // 데모 계정은 AI 분석 결과를 임시로만 저장
       if (character) {
         const updatedCharacter = {
           ...character,
@@ -238,31 +304,33 @@ const RPGLocationSystem: React.FC<RPGLocationSystemProps> = ({ onLogout, userEma
           }
         };
         setCharacter(updatedCharacter);
-        localStorage.setItem('demoCharacter', JSON.stringify(updatedCharacter));
       }
     }
   };
 
   const handleBattleStart = (dungeon: any) => {
+    if (dungeon.needsLogin) {
+      setShowLoginPrompt(true);
+      return;
+    }
+    
+    // 거리 미달 시 전투 불가
+    if (!dungeon.canEnter) {
+      const totalWalked = (character?.totalWalkDistance || 0) + totalDistance;
+      const requiredDistance = (dungeon.requiredDistance / 1000).toFixed(1);
+      const currentDistance = (totalWalked / 1000).toFixed(1);
+      const remainingDistance = (Math.max(0, dungeon.requiredDistance - totalWalked) / 1000).toFixed(1);
+      alert(`이 던전에 입장하려면 ${requiredDistance}km를 걸어야 합니다.\n현재 걸은 거리: ${currentDistance}km\n남은 거리: ${remainingDistance}km`);
+      return;
+    }
+    
     setSelectedDungeon(dungeon);
     setShowBattle(true);
   };
 
-  const handleAdminClick = () => {
-    const newCount = adminClickCount + 1;
-    setAdminClickCount(newCount);
-    
-    if (newCount >= 3) {
-      // 관리자 로그인 시도
-      window.location.reload(); // 페이지 새로고침으로 로그인 화면으로 이동
-      localStorage.setItem('adminLogin', 'true');
-    }
-    
-    // 3초 후 카운트 리셋
-    setTimeout(() => setAdminClickCount(0), 3000);
-  };
 
-  const handleBattleEnd = (result: { result: 'win' | 'lose'; expGained: number }) => {
+
+  const handleBattleEnd = (result: { result: 'win' | 'lose'; expGained: number; coinsGained?: number }) => {
     setShowBattle(false);
     setShowRandomBattle(false);
     
@@ -282,6 +350,7 @@ const RPGLocationSystem: React.FC<RPGLocationSystemProps> = ({ onLogout, userEma
         ...character,
         level: newLevel,
         exp: finalExp,
+        coins: ((character as any).coins || 0) + (result.coinsGained || 0),
         stats: newLevel > character.level ? {
           hp: character.stats.hp + 20,
           attack: character.stats.attack + 3,
@@ -292,8 +361,17 @@ const RPGLocationSystem: React.FC<RPGLocationSystemProps> = ({ onLogout, userEma
       
       setCharacter(updatedCharacter);
       
-      if (userEmail === 'demo@offline.local') {
-        localStorage.setItem('demoCharacter', JSON.stringify(updatedCharacter));
+      // 승리 보상 알림
+      if (result.coinsGained && result.coinsGained > 0) {
+        setTimeout(() => {
+          alert(`🎉 승리! ${result.expGained} EXP와 ${result.coinsGained} 코인을 획득했습니다!`);
+        }, 500);
+      }
+      
+      const isDemoAccount = userEmail === 'demo@demo.com';
+      if (isDemoAccount) {
+        // 데모 계정은 캐릭터 정보를 임시로만 저장
+        console.log('데모 계정 캐릭터 업데이트:', updatedCharacter);
       }
     }
   };
@@ -396,17 +474,27 @@ const RPGLocationSystem: React.FC<RPGLocationSystemProps> = ({ onLogout, userEma
             <div className="flex items-center gap-3">
               <Swords className="w-8 h-8" />
               <div>
-                <h1 
-                  className="text-3xl font-bold text-black cursor-pointer select-none"
-                  onClick={handleAdminClick}
-                  title={adminClickCount > 0 ? `관리자 모드 ${3 - adminClickCount}번 더 클릭` : ''}
-                >
+                <h1 className="text-3xl font-bold text-black">
                   워킹 RPG 어드벤처
                 </h1>
                 <p className="text-black text-sm">{userEmail}</p>
               </div>
             </div>
             <div className="flex gap-2">
+              <button
+                onClick={() => setShowRanking(true)}
+                className="bg-red-600 hover:bg-red-700 text-white p-2 rounded"
+                title="랭킹"
+              >
+                <Medal className="w-5 h-5" />
+              </button>
+              <button
+                onClick={() => setShowCostumeShop(true)}
+                className="bg-green-600 hover:bg-green-700 text-white p-2 rounded"
+                title="코스튬 상점"
+              >
+                <ShoppingBag className="w-5 h-5" />
+              </button>
               <button
                 onClick={() => setShowDungeonShowcase(true)}
                 className="bg-purple-600 hover:bg-purple-700 text-white p-2 rounded"
@@ -493,7 +581,7 @@ const RPGLocationSystem: React.FC<RPGLocationSystemProps> = ({ onLogout, userEma
           )}
 
           {/* 스탯 */}
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-4 gap-4">
             <div className="flex items-center gap-2">
               <Heart className="w-5 h-5 text-yellow-600" />
               <div>
@@ -515,25 +603,17 @@ const RPGLocationSystem: React.FC<RPGLocationSystemProps> = ({ onLogout, userEma
                 <div className="text-lg font-bold text-black">{stats.stats.defense}</div>
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* 오늘의 모험 기록 */}
-        <div className="grid grid-cols-2 gap-4 mb-6">
-          <div className="bg-yellow-100 rounded-lg p-4 border-2 border-yellow-300">
-            <div className="text-sm text-black mb-1">이동 거리</div>
-            <div className="text-2xl font-bold text-yellow-600">
-              {(totalDistance / 1000).toFixed(2)} km
-            </div>
-          </div>
-
-          <div className="bg-yellow-100 rounded-lg p-4 border-2 border-yellow-300">
-            <div className="text-sm text-black mb-1">걷기 경험치</div>
-            <div className="text-2xl font-bold text-yellow-600">
-              {Math.floor(totalDistance / 10)} XP
+            <div className="flex items-center gap-2">
+              <ShoppingBag className="w-5 h-5 text-yellow-600" />
+              <div>
+                <div className="text-xs text-black">코인</div>
+                <div className="text-lg font-bold text-black">{((character as any)?.coins || 0).toLocaleString()}</div>
+              </div>
             </div>
           </div>
         </div>
+
+
 
         {/* 현재 퀘스트 */}
         <div className="bg-white rounded-lg p-4 mb-6 border-4 border-yellow-400">
@@ -557,64 +637,55 @@ const RPGLocationSystem: React.FC<RPGLocationSystemProps> = ({ onLogout, userEma
           </div>
         </div>
 
-        {/* 조우 게이지 */}
-        <div className="bg-white rounded-lg p-4 mb-6 border-4 border-yellow-400">
-          <div className="flex items-center gap-2 mb-3">
-            <Swords className="w-5 h-5 text-red-600" />
-            <h3 className="font-bold text-black">몬스터 조우 게이지</h3>
-          </div>
-          <div className="mb-2">
-            <div className="flex justify-between text-sm text-black mb-1">
-              <span>조우 확률</span>
-              <span>{encounterGauge}/100</span>
-            </div>
-            <div className="w-full bg-red-200 rounded-full h-4 border-2 border-red-400">
-              <div
-                className="bg-red-500 h-full rounded-full transition-all duration-500"
-                style={{ width: `${encounterGauge}%` }}
-              ></div>
-            </div>
-          </div>
-          <p className="text-xs text-gray-600">
-            걸을수록 몬스터와 조우할 확률이 높아집니다. 100%가 되면 랜덤 몬스터가 나타납니다!
-          </p>
-        </div>
 
-        {/* 지도 및 던전 */}
+
+        {/* 지도 및 던전 버튼 */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
           <GameMap
-            encounterGauge={encounterGauge}
+            totalWalkDistance={(character?.totalWalkDistance || 0) + totalDistance}
+            nearbyDungeons={nearbyDungeons}
           />
 
           <div className="bg-white rounded-lg p-4 border-4 border-yellow-400">
-            <div className="flex items-center gap-2 mb-3">
+            <div className="flex items-center gap-2 mb-4">
               <Crown className="w-5 h-5 text-yellow-600" />
-              <h3 className="font-bold text-black">근처 던전</h3>
+              <h3 className="font-bold text-black">던전 탐험</h3>
             </div>
-            <div className="space-y-2">
-              {nearbyDungeons.map(dungeon => (
-                <div
-                  key={dungeon.dungeonId}
-                  className={`p-3 rounded border-2 ${
-                    dungeon.canEnter 
-                      ? 'bg-yellow-50 border-yellow-300 cursor-pointer hover:bg-yellow-100' 
-                      : 'bg-gray-100 border-gray-300'
-                  }`}
-                  onClick={() => dungeon.canEnter && handleBattleStart(dungeon)}
-                >
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <div className="font-bold text-black text-sm">{dungeon.name}</div>
-                      <div className="text-xs text-gray-600">
-                        필요 레벨: {dungeon.requiredLevel} | 보상: {dungeon.expReward} EXP
-                      </div>
-                    </div>
-                    <div className="text-lg">
-                      {dungeon.canEnter ? '⚔️' : '🔒'}
-                    </div>
+            
+            <div className="space-y-3">
+              <button
+                onClick={() => setShowDungeonList(true)}
+                className="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-4 px-4 rounded-lg flex items-center justify-between"
+              >
+                <div className="flex items-center gap-2">
+                  <Crown className="w-5 h-5" />
+                  <span>근처 던전 목록</span>
+                </div>
+                <div className="bg-yellow-600 px-3 py-1 rounded-full text-sm">
+                  {nearbyDungeons.length}개
+                </div>
+              </button>
+              
+              <div className="grid grid-cols-2 gap-2">
+                <div className="bg-green-50 p-3 rounded border border-green-200 text-center">
+                  <div className="text-sm text-green-600 font-bold">입장 가능</div>
+                  <div className="text-lg font-bold text-green-700">
+                    {nearbyDungeons.filter(d => d.canEnter).length}개
                   </div>
                 </div>
-              ))}
+                <div className="bg-red-50 p-3 rounded border border-red-200 text-center">
+                  <div className="text-sm text-red-600 font-bold">잠금됨</div>
+                  <div className="text-lg font-bold text-red-700">
+                    {nearbyDungeons.filter(d => !d.canEnter && !d.needsLogin).length}개
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-yellow-50 p-3 rounded border border-yellow-200">
+                <div className="text-xs text-gray-600 text-center">
+                  더 많은 던전을 해금하려면 더 걸어보세요!
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -680,10 +751,28 @@ const RPGLocationSystem: React.FC<RPGLocationSystemProps> = ({ onLogout, userEma
 
           <div className="grid grid-cols-2 gap-3">
             <button
-              onClick={resetDistance}
-              className="bg-yellow-200 hover:bg-yellow-300 text-black font-bold py-2 px-4 rounded border-2 border-yellow-400 text-sm"
+              onClick={() => {
+                resetDistance();
+                // 서버의 걷기 거리도 초기화
+                if (userEmail !== 'demo@demo.com') {
+                  fetch('/api/location/reset', {
+                    method: 'POST',
+                    headers: {
+                      'Authorization': `Bearer ${localStorage.getItem('token')}`,
+                      'Content-Type': 'application/json'
+                    }
+                  }).then(() => {
+                    console.log('✅ 서버 걷기 거리 초기화 완료');
+                    // 던전 목록 다시 로드
+                    window.location.reload();
+                  }).catch(err => {
+                    console.error('❌ 서버 걷기 거리 초기화 실패:', err);
+                  });
+                }
+              }}
+              className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded border-2 border-red-700 text-sm"
             >
-              기록 초기화
+              🔄 전체 초기화
             </button>
             {bodyAnalysisResult && (
               <button
@@ -772,6 +861,196 @@ const RPGLocationSystem: React.FC<RPGLocationSystemProps> = ({ onLogout, userEma
             setShowRandomBattle(false);
           }}
         />
+      )}
+
+      {/* 코스튬 상점 */}
+      {showCostumeShop && (
+        <CostumeShop onClose={() => setShowCostumeShop(false)} />
+      )}
+
+      {/* 랭킹 */}
+      {showRanking && (
+        <Ranking onClose={() => setShowRanking(false)} />
+      )}
+
+      {/* 던전 목록 팝업 */}
+      {showDungeonList && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-hidden">
+            {/* 헤더 */}
+            <div className="bg-yellow-400 p-6 border-b-4 border-yellow-600">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <Crown className="w-8 h-8 text-black" />
+                  <div>
+                    <h2 className="text-2xl font-bold text-black">근처 던전 목록</h2>
+                    <p className="text-black text-sm">총 {nearbyDungeons.length}개의 던전을 발견했습니다</p>
+                  </div>
+                </div>
+                <button
+                  onClick={() => setShowDungeonList(false)}
+                  className="bg-yellow-600 hover:bg-yellow-700 text-white p-2 rounded"
+                >
+                  ✕
+                </button>
+              </div>
+            </div>
+
+            {/* 던전 목록 */}
+            <div className="p-6 overflow-y-auto max-h-[70vh]">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {nearbyDungeons.map(dungeon => (
+                  <div
+                    key={dungeon.dungeonId}
+                    className={`p-4 rounded-lg border-2 cursor-pointer transition-all ${
+                      dungeon.canEnter 
+                        ? 'bg-yellow-50 border-yellow-300 hover:bg-yellow-100 hover:border-yellow-400' 
+                        : dungeon.needsLogin
+                        ? 'bg-blue-50 border-blue-300 hover:bg-blue-100 hover:border-blue-400'
+                        : 'bg-red-50 border-red-300 hover:bg-red-100 hover:border-red-400'
+                    }`}
+                    onClick={() => {
+                      setShowDungeonList(false);
+                      handleBattleStart(dungeon);
+                    }}
+                  >
+                    <div className="flex items-start justify-between mb-3">
+                      <div>
+                        <div className="font-bold text-black text-lg mb-1">{dungeon.name}</div>
+                        <div className="flex items-center gap-2">
+                          <span className={`px-2 py-1 rounded text-xs font-bold ${
+                            dungeon.difficulty === 'easy' ? 'bg-green-200 text-green-800' :
+                            dungeon.difficulty === 'normal' ? 'bg-blue-200 text-blue-800' :
+                            dungeon.difficulty === 'hard' ? 'bg-orange-200 text-orange-800' :
+                            dungeon.difficulty === 'very_hard' ? 'bg-red-200 text-red-800' :
+                            'bg-purple-200 text-purple-800'
+                          }`}>
+                            {dungeon.difficulty === 'easy' ? '쉬움' :
+                             dungeon.difficulty === 'normal' ? '보통' :
+                             dungeon.difficulty === 'hard' ? '어려움' :
+                             dungeon.difficulty === 'very_hard' ? '매우 어려움' :
+                             '악몽'}
+                          </span>
+                          {dungeon.isLegendary && (
+                            <span className="px-2 py-1 rounded text-xs font-bold bg-purple-200 text-purple-800">
+                              ⭐ 전설
+                            </span>
+                          )}
+                        </div>
+                      </div>
+                      <div className="text-3xl">
+                        {dungeon.canEnter ? '⚔️' : dungeon.needsLogin ? '🔐' : '🚶‍♂️'}
+                      </div>
+                    </div>
+
+                    <div className="space-y-2">
+                      {dungeon.needsLogin ? (
+                        <div className="text-sm text-blue-600 font-bold">
+                          🔐 로그인 후 이용 가능
+                        </div>
+                      ) : dungeon.canEnter ? (
+                        <div className="space-y-1">
+                          <div className="text-sm text-green-600 font-bold">
+                            ✅ 입장 가능!
+                          </div>
+                          <div className="text-sm text-gray-600">
+                            레벨 {dungeon.requiredLevel} | 보상: {dungeon.expReward} EXP + {Math.floor(dungeon.expReward / 5) + 10} 코인
+                          </div>
+                        </div>
+                      ) : (
+                        <div className="space-y-2">
+                          {(() => {
+                            const totalWalked = (character?.totalWalkDistance || 0) + totalDistance;
+                            return (
+                              <div className="space-y-2">
+                                <div className="text-sm text-red-600 font-bold">
+                                  🚶‍♂️ 더 걸어야 해금됩니다
+                                </div>
+                                <div className="grid grid-cols-2 gap-2 text-xs">
+                                  <div>🚶 필요: {(dungeon.requiredDistance / 1000).toFixed(1)}km</div>
+                                  <div>📍 현재: {(totalWalked / 1000).toFixed(1)}km</div>
+                                </div>
+                                <div className="text-xs text-center text-gray-600">
+                                  남은 거리: {Math.max(0, (dungeon.requiredDistance - totalWalked) / 1000).toFixed(1)}km
+                                </div>
+                                
+                                {/* 진행률 바 */}
+                                <div className="w-full bg-gray-200 rounded-full h-3">
+                                  <div
+                                    className="bg-blue-500 h-full rounded-full transition-all duration-500"
+                                    style={{ 
+                                      width: `${Math.min(100, (totalWalked / dungeon.requiredDistance) * 100)}%` 
+                                    }}
+                                  ></div>
+                                </div>
+                                <div className="text-center text-xs text-gray-600">
+                                  진행률: {Math.min(100, Math.round((totalWalked / dungeon.requiredDistance) * 100))}%
+                                </div>
+                                
+                                <div className="text-xs text-gray-600">
+                                  🎁 보상: {dungeon.expReward} EXP + {Math.floor(dungeon.expReward / 5) + 10} 코인
+                                </div>
+                              </div>
+                            );
+                          })()}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {nearbyDungeons.length === 0 && (
+                <div className="text-center py-12">
+                  <Crown className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+                  <p className="text-gray-500">근처에 던전이 없습니다.</p>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* 로그인 필요 팝업 */}
+      {showLoginPrompt && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-lg p-6 max-w-md w-full border-4 border-blue-400">
+            <div className="text-center">
+              <div className="text-6xl mb-4">🔐</div>
+              <h2 className="text-2xl font-bold text-black mb-4">로그인이 필요합니다</h2>
+              <div className="bg-blue-100 p-4 rounded border-2 border-blue-300 mb-4">
+                <p className="text-black mb-2">
+                  <strong>더 많은 던전을 탐험하려면 로그인하세요!</strong>
+                </p>
+                <p className="text-sm text-gray-600">
+                  • 21개의 다양한 던전 탐험<br/>
+                  • 캐릭터 진행 상황 저장<br/>
+                  • AI 몸 상태 분석<br/>
+                  • 전설의 보스 도전<br/>
+                  • 코스튬 상점 이용<br/>
+                  • 랭킹 시스템 참여
+                </p>
+              </div>
+              <div className="flex gap-3">
+                <button
+                  onClick={() => {
+                    setShowLoginPrompt(false);
+                    onLogout(); // 로그인 화면으로 돌아가기
+                  }}
+                  className="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded"
+                >
+                  로그인하러 가기
+                </button>
+                <button
+                  onClick={() => setShowLoginPrompt(false)}
+                  className="flex-1 bg-gray-400 hover:bg-gray-500 text-white font-bold py-3 px-4 rounded"
+                >
+                  나중에
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       )}
     </div>
   );

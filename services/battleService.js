@@ -160,10 +160,10 @@ class BattleService {
       // 최종 보스 (거의 불가능)
       ancient_dragon: { name: '고대 드래곤', hp: 500, attack: 50, defense: 30, sprite: '🐉' },
       demon_king: { name: '마왕', hp: 666, attack: 66, defense: 33, sprite: '👹' },
-      god_of_war: { name: '전쟁의 신', hp: 777, attack: 77, defense: 40, sprite: '⚡' },
-      void_lord: { name: '공허의 군주', hp: 888, attack: 88, defense: 44, sprite: '🌌' },
-      chaos_emperor: { name: '혼돈의 황제', hp: 999, attack: 99, defense: 50, sprite: '👑' },
-      infinity_beast: { name: '무한의 야수', hp: 1200, attack: 120, defense: 60, sprite: '🌟' }
+      god_of_war: { name: '전쟁의 신', hp: 1500, attack: 150, defense: 80, sprite: '⚡' },
+      void_lord: { name: '공허의 군주', hp: 2000, attack: 180, defense: 90, sprite: '🌌' },
+      chaos_emperor: { name: '혼돈의 황제', hp: 2500, attack: 200, defense: 100, sprite: '👑' },
+      infinity_beast: { name: '무한의 야수', hp: 3000, attack: 250, defense: 120, sprite: '🌟' }
     };
 
     const base = monsterData[type] || monsterData.goblin;
@@ -582,6 +582,7 @@ class BattleService {
       return {
         result: battle.status,
         expGained: battle.status === 'victory' ? battle.monster.expReward : 0,
+        coinsGained: battle.status === 'victory' ? Math.floor(battle.monster.expReward / 5) + 10 : 0,
         log: battle.log
       };
     }

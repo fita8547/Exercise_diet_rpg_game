@@ -30,9 +30,16 @@ export const useAuthState = () => {
     const savedToken = localStorage.getItem('token');
     const savedUser = localStorage.getItem('user');
     
-    if (savedToken && savedUser) {
-      setToken(savedToken);
-      setUser(JSON.parse(savedUser));
+    if (savedToken && savedUser && savedUser !== 'undefined') {
+      try {
+        setToken(savedToken);
+        setUser(JSON.parse(savedUser));
+      } catch (error) {
+        console.error('사용자 정보 파싱 오류:', error);
+        // 잘못된 데이터 제거
+        localStorage.removeItem('token');
+        localStorage.removeItem('user');
+      }
     }
     setIsLoading(false);
   }, []);

@@ -124,14 +124,7 @@ const BattleSystem: React.FC<BattleSystemProps> = ({
   const [battleResult, setBattleResult] = useState<'win' | 'lose' | null>(null);
   const [isAnimating, setIsAnimating] = useState(false);
 
-  function getMonsterSprite(dungeonId: string): string {
-    if (dungeonId.includes('goblin')) return '👹';
-    if (dungeonId.includes('orc')) return '👺';
-    if (dungeonId.includes('dragon')) return '🐉';
-    if (dungeonId.includes('slime')) return '🟢';
-    if (dungeonId.includes('skeleton')) return '💀';
-    return '👾';
-  }
+
 
   const calculateDamage = (attacker: { attack: number }, defender: { defense: number }) => {
     const baseDamage = Math.max(1, attacker.attack - defender.defense);
