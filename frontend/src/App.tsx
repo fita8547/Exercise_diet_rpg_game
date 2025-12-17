@@ -16,17 +16,22 @@ function App() {
   const handleDemoLogin = async () => {
     try {
       console.log('🎮 데모 로그인 시도...');
+      console.log('📡 API URL:', 'http://localhost:3001/api');
       await login('demo@demo.com', 'demo123');
       console.log('✅ 데모 로그인 성공');
+      console.log('👤 사용자 정보:', user);
+      console.log('🔑 토큰:', token);
     } catch (error) {
-      console.log('❌ 데모 로그인 실패, 계정 생성 시도...');
+      console.log('❌ 데모 로그인 실패:', error);
+      console.log('🔄 계정 생성 시도...');
       // 데모 계정이 없으면 생성
       try {
         await register('demo@demo.com', 'demo123');
         console.log('✅ 데모 계정 생성 및 로그인 성공');
       } catch (registerError) {
         console.error('❌ 서버 연결 실패:', registerError);
-        alert('서버에 연결할 수 없습니다. 잠시 후 다시 시도해주세요.');
+        const errorMessage = registerError instanceof Error ? registerError.message : '알 수 없는 오류';
+        alert('서버에 연결할 수 없습니다. 잠시 후 다시 시도해주세요.\n\n오류: ' + errorMessage);
       }
     }
   };
@@ -111,6 +116,24 @@ function App() {
                           className="w-full bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-4 px-6 rounded-lg text-lg"
                         >
                           🎮 데모로 바로 시작
+                        </button>
+                        <button
+                          onClick={async () => {
+                            try {
+                              console.log('🔧 직접 API 테스트...');
+                              const response = await fetch('http://localhost:3001/api/test');
+                              const data = await response.json();
+                              console.log('✅ API 테스트 성공:', data);
+                              alert('API 연결 성공: ' + data.message);
+                            } catch (error) {
+                              console.error('❌ API 테스트 실패:', error);
+                              const errorMessage = error instanceof Error ? error.message : '알 수 없는 오류';
+                              alert('API 연결 실패: ' + errorMessage);
+                            }
+                          }}
+                          className="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded-lg text-sm"
+                        >
+                          🔧 API 연결 테스트
                         </button>
                         <button
                           onClick={() => setShowAuthModal(true)}

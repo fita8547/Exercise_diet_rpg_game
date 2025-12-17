@@ -30,9 +30,9 @@ export const useLocationTracker = () => {
   const lastSubmissionRef = useRef<number>(0);
   const accumulatedDistanceRef = useRef<number>(0);
   
-  const dailyLimit = 10000; // 10km
-  const minDistanceThreshold = 5; // 5m
-  const submissionThreshold = 100; // 100m마다 서버에 전송
+  const dailyLimit = 50000; // 50km (더 높은 한도)
+  const minDistanceThreshold = 3; // 3m (더 민감하게)
+  const submissionThreshold = 50; // 50m마다 서버에 전송 (더 자주)
 
   // 권한 상태 확인
   useEffect(() => {
@@ -46,19 +46,20 @@ export const useLocationTracker = () => {
     }
   }, []);
 
-  // 로컬 스토리지에서 오늘의 거리 복원
+  // 로컬 스토리지에서 총 걸은 거리 복원 (날짜 구분 없이)
   useEffect(() => {
-    const today = new Date().toISOString().split('T')[0];
-    const savedDistance = localStorage.getItem(`walkDistance_${today}`);
+    const savedDistance = localStorage.getItem('totalWalkDistance');
     if (savedDistance) {
-      setTotalDistance(parseFloat(savedDistance));
+      const distance = parseFloat(savedDistance);
+      setTotalDistance(distance);
+      console.log(`📱 저장된 걸은 거리 복원: ${distance}m (${(distance/1000).toFixed(2)}km)`);
     }
   }, []);
 
-  // 거리 저장
+  // 거리 저장 (총 누적 거리)
   const saveDistance = useCallback((distance: number) => {
-    const today = new Date().toISOString().split('T')[0];
-    localStorage.setItem(`walkDistance_${today}`, distance.toString());
+    localStorage.setItem('totalWalkDistance', distance.toString());
+    console.log(`💾 걸은 거리 저장: ${distance}m (${(distance/1000).toFixed(2)}km)`);
   }, []);
 
   // 서버에 걷기 운동 제출
@@ -73,14 +74,30 @@ export const useLocationTracker = () => {
       const isOffline = !navigator.onLine || userEmail === 'demo@demo.com';
       
       if (!isOffline) {
-        // 걷기 운동 기록과 위치 업데이트를 동시에 수행
+        // Java 서버에 걷기 거리 업데이트
+        const response = await fetch('http://localhost:3001/api/location/update', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ distance: Math.floor(distance) })
+        });
+        
+        if (response.ok) {
+          const data = await response.json();
+          console.log(`✅ 서버 걷기 거리 업데이트: +${distance.toFixed(1)}m, 총 ${data.totalWalkDistance}m`);
+        } else {
+          console.error('❌ 서버 걷기 거리 업데이트 실패');
+        }
+        
+        // 기존 API도 호출 (호환성)
         await Promise.all([
           workoutAPI.submitWorkout('walk', Math.floor(distance)),
           locationAPI.updateWalkDistance(Math.floor(distance))
-        ]);
+        ]).catch(err => console.log('기존 API 호출 실패 (무시됨):', err));
       }
       
-      console.log(`걷기 운동 기록: ${Math.floor(distance)}m ${isOffline ? '(오프라인)' : '(온라인)'}`);
+      console.log(`🚶 걷기 운동 기록: ${Math.floor(distance)}m ${isOffline ? '(오프라인)' : '(온라인)'}`);
     } catch (error) {
       console.error('걷기 운동 제출 실패:', error);
     } finally {
@@ -136,20 +153,25 @@ export const useLocationTracker = () => {
             position.coords.longitude
           );
 
-          // 유효한 이동 거리인지 확인 (5m 이상, 500m 미만)
-          if (distance >= minDistanceThreshold && distance < 500) {
+          // 유효한 이동 거리인지 확인 (3m 이상, 200m 미만 - 더 민감하고 현실적)
+          if (distance >= minDistanceThreshold && distance < 200) {
             const newTotal = Math.min(totalDistance + distance, dailyLimit);
             setTotalDistance(newTotal);
             saveDistance(newTotal);
             
+            console.log(`🚶 이동 감지: +${distance.toFixed(1)}m, 총 ${newTotal.toFixed(1)}m (${(newTotal/1000).toFixed(2)}km)`);
+            
             // 누적 거리 업데이트
             accumulatedDistanceRef.current += distance;
             
-            // 100m마다 서버에 제출
+            // 50m마다 서버에 제출 (더 자주)
             if (accumulatedDistanceRef.current >= submissionThreshold) {
+              console.log(`📤 서버 전송: ${accumulatedDistanceRef.current.toFixed(1)}m`);
               submitWalkingExercise(accumulatedDistanceRef.current);
               accumulatedDistanceRef.current = 0;
             }
+          } else if (distance >= 200) {
+            console.log(`⚠️ 이동 거리가 너무 큼 (${distance.toFixed(1)}m) - 무시됨`);
           }
         }
 
@@ -195,8 +217,8 @@ export const useLocationTracker = () => {
     setTotalDistance(0);
     accumulatedDistanceRef.current = 0;
     lastPositionRef.current = null;
-    const today = new Date().toISOString().split('T')[0];
-    localStorage.removeItem(`walkDistance_${today}`);
+    localStorage.removeItem('totalWalkDistance');
+    console.log('🔄 걸은 거리 초기화 완료');
   }, []);
 
   return {

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ShoppingBag, Coins, Lock, Check, X } from 'lucide-react';
+import { ShoppingBag, Footprints, Lock, Check, X } from 'lucide-react';
 import { costumeAPI } from '../services/api';
 
 interface Costume {
@@ -9,25 +9,20 @@ interface Costume {
   category: 'head' | 'body' | 'weapon' | 'accessory';
   rarity: 'common' | 'rare' | 'epic' | 'legendary';
   price: number;
-  statBonus: {
-    hp?: number;
-    attack?: number;
-    defense?: number;
-    stamina?: number;
-  };
   icon: string;
   unlockLevel: number;
   isOwned: boolean;
   isEquipped: boolean;
+  visualEffect?: string; // 외관 효과 설명
 }
 
 interface CostumeShopProps {
   onClose: () => void;
+  walkingExp?: number; // 걷기 경험치 전달
 }
 
-const CostumeShop: React.FC<CostumeShopProps> = ({ onClose }) => {
+const CostumeShop: React.FC<CostumeShopProps> = ({ onClose, walkingExp = 0 }) => {
   const [costumes, setCostumes] = useState<Costume[]>([]);
-  const [coins, setCoins] = useState(0);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [isLoading, setIsLoading] = useState(true);
 
@@ -63,7 +58,6 @@ const CostumeShop: React.FC<CostumeShopProps> = ({ onClose }) => {
       const data = await costumeAPI.getCostumes();
       console.log('🛍️ 코스튬 데이터:', data);
       setCostumes(data.costumes || []);
-      setCoins(data.coins || 0);
     } catch (error) {
       console.error('🛍️ 코스튬 로드 오류:', error);
     } finally {
@@ -86,7 +80,6 @@ const CostumeShop: React.FC<CostumeShopProps> = ({ onClose }) => {
       
       if (response.ok) {
         alert(data.message);
-        setCoins(data.remainingCoins);
         loadCostumes(); // 목록 새로고침
       } else {
         alert(data.error);
@@ -126,13 +119,24 @@ const CostumeShop: React.FC<CostumeShopProps> = ({ onClose }) => {
     ? costumes 
     : costumes.filter(costume => costume.category === selectedCategory);
 
-  const formatStatBonus = (statBonus: any) => {
-    const bonuses = [];
-    if (statBonus.hp) bonuses.push(`❤️ +${statBonus.hp}`);
-    if (statBonus.attack) bonuses.push(`⚔️ +${statBonus.attack}`);
-    if (statBonus.defense) bonuses.push(`🛡️ +${statBonus.defense}`);
-    if (statBonus.stamina) bonuses.push(`⚡ +${statBonus.stamina}`);
-    return bonuses.join(' ');
+  const getVisualEffect = (costume: Costume) => {
+    // 코스튬별 외관 효과 설명
+    const effects: { [key: string]: string } = {
+      'warrior_helmet': '🔥 용맹한 전사의 기운',
+      'mage_hat': '✨ 신비로운 마법의 오라',
+      'royal_crown': '👑 왕족의 위엄과 품격',
+      'leather_armor': '🛡️ 견고한 방어 자세',
+      'chain_mail': '⚔️ 중무장 기사의 위용',
+      'dragon_scale': '🐲 드래곤의 위압적인 기운',
+      'iron_sword': '⚔️ 날카로운 검기',
+      'magic_staff': '🔮 마법진이 빛나는 효과',
+      'excalibur': '⚡ 성스러운 빛의 검기',
+      'power_ring': '💫 손가락에서 빛나는 오라',
+      'health_amulet': '💚 생명력이 넘치는 빛',
+      'legendary_necklace': '🌟 모든 능력이 빛나는 효과'
+    };
+    
+    return costume.visualEffect || effects[costume.costumeId] || '✨ 멋진 외관 효과';
   };
 
   if (isLoading) {
@@ -162,9 +166,10 @@ const CostumeShop: React.FC<CostumeShopProps> = ({ onClose }) => {
               </div>
             </div>
             <div className="flex items-center gap-4">
-              <div className="flex items-center gap-2 bg-yellow-300 px-4 py-2 rounded-lg border-2 border-yellow-500">
-                <Coins className="w-5 h-5 text-yellow-700" />
-                <span className="font-bold text-black">{coins.toLocaleString()}</span>
+              <div className="flex items-center gap-2 bg-green-300 px-4 py-2 rounded-lg border-2 border-green-500">
+                <Footprints className="w-5 h-5 text-green-700" />
+                <span className="font-bold text-black">{walkingExp.toLocaleString()}</span>
+                <span className="text-sm text-black">걷기 경험치</span>
               </div>
               <button
                 onClick={onClose}
@@ -214,14 +219,15 @@ const CostumeShop: React.FC<CostumeShopProps> = ({ onClose }) => {
 
                 <div className="space-y-2 mb-4">
                   <p className="text-sm text-gray-600">{costume.description}</p>
-                  <div className="text-xs text-blue-600">
-                    {formatStatBonus(costume.statBonus)}
+                  <div className="text-xs text-purple-600 font-medium">
+                    {getVisualEffect(costume)}
                   </div>
                   <div className="flex items-center justify-between text-xs">
                     <span className="text-gray-500">필요 레벨: {costume.unlockLevel}</span>
                     <div className="flex items-center gap-1">
-                      <Coins className="w-3 h-3 text-yellow-600" />
+                      <Footprints className="w-3 h-3 text-green-600" />
                       <span className="font-bold">{costume.price.toLocaleString()}</span>
+                      <span className="text-xs text-gray-500">걷기 경험치</span>
                     </div>
                   </div>
                 </div>
@@ -252,14 +258,14 @@ const CostumeShop: React.FC<CostumeShopProps> = ({ onClose }) => {
                   ) : (
                     <button
                       onClick={() => purchaseCostume(costume.costumeId)}
-                      disabled={coins < costume.price}
+                      disabled={walkingExp < costume.price}
                       className={`w-full font-bold py-2 px-4 rounded text-sm ${
-                        coins >= costume.price
-                          ? 'bg-yellow-500 hover:bg-yellow-600 text-white'
+                        walkingExp >= costume.price
+                          ? 'bg-green-500 hover:bg-green-600 text-white'
                           : 'bg-gray-300 text-gray-500 cursor-not-allowed'
                       }`}
                     >
-                      {coins >= costume.price ? '구매하기' : '코인 부족'}
+                      {walkingExp >= costume.price ? '구매하기' : '걷기 경험치 부족'}
                     </button>
                   )}
                 </div>

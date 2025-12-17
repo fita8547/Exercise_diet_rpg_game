@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Trophy, Medal, Crown, TrendingUp, MapPin, Coins, X } from 'lucide-react';
+import { Trophy, Medal, Crown, TrendingUp, MapPin, Footprints, X } from 'lucide-react';
 import { rankingAPI } from '../services/api';
 
 interface RankingEntry {
@@ -8,7 +8,7 @@ interface RankingEntry {
   level: number;
   exp: number;
   totalWalkDistance: number;
-  coins: number;
+  walkingExp: number;
   equippedCostumes: {
     head?: string;
     body?: string;
@@ -23,13 +23,13 @@ interface RankingProps {
 
 const Ranking: React.FC<RankingProps> = ({ onClose }) => {
   const [rankings, setRankings] = useState<RankingEntry[]>([]);
-  const [selectedType, setSelectedType] = useState<'level' | 'walkDistance' | 'coins'>('level');
+  const [selectedType, setSelectedType] = useState<'level' | 'walkDistance' | 'walkingExp'>('level');
   const [isLoading, setIsLoading] = useState(true);
 
   const rankingTypes = [
     { id: 'level', name: '레벨 랭킹', icon: <Trophy className="w-5 h-5" />, color: 'bg-yellow-500' },
     { id: 'walkDistance', name: '걷기 랭킹', icon: <MapPin className="w-5 h-5" />, color: 'bg-green-500' },
-    { id: 'coins', name: '코인 랭킹', icon: <Coins className="w-5 h-5" />, color: 'bg-blue-500' }
+    { id: 'walkingExp', name: '걷기 경험치 랭킹', icon: <Footprints className="w-5 h-5" />, color: 'bg-blue-500' }
   ];
 
   useEffect(() => {
@@ -39,7 +39,7 @@ const Ranking: React.FC<RankingProps> = ({ onClose }) => {
   const loadRankings = async () => {
     setIsLoading(true);
     try {
-      const response = await fetch(`/api/ranking?type=${selectedType}`, {
+      const response = await fetch(`http://localhost:3001/api/ranking`, {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         }
@@ -47,7 +47,20 @@ const Ranking: React.FC<RankingProps> = ({ onClose }) => {
       
       if (response.ok) {
         const data = await response.json();
-        setRankings(data.rankings);
+        // 선택된 타입에 따라 적절한 랭킹 데이터 설정
+        let rankingData = [];
+        switch (selectedType) {
+          case 'level':
+            rankingData = data.levelRanking || [];
+            break;
+          case 'walkDistance':
+            rankingData = data.walkRanking || [];
+            break;
+          case 'walkingExp':
+            rankingData = data.walkingExpRanking || [];
+            break;
+        }
+        setRankings(rankingData);
       }
     } catch (error) {
       console.error('랭킹 로드 실패:', error);
@@ -88,8 +101,8 @@ const Ranking: React.FC<RankingProps> = ({ onClose }) => {
         return `레벨 ${entry.level} (${entry.exp} EXP)`;
       case 'walkDistance':
         return `${(entry.totalWalkDistance / 1000).toFixed(2)} km`;
-      case 'coins':
-        return `${entry.coins.toLocaleString()} 코인`;
+      case 'walkingExp':
+        return `${entry.walkingExp.toLocaleString()} 걷기 경험치`;
       default:
         return '';
     }

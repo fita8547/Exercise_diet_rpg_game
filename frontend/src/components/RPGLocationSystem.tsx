@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Swords, Play, Pause, AlertCircle, Trophy, Zap, Heart, Shield, LogOut, Brain, Crown, ShoppingBag, Medal } from 'lucide-react';
+import { Swords, Play, Pause, AlertCircle, Trophy, Zap, Heart, Shield, LogOut, Brain, Crown, ShoppingBag, Medal, Camera } from 'lucide-react';
 import { useLocationTracker } from '../hooks/useLocationTracker';
 import { characterAPI, encounterAPI, battleAPI } from '../services/api';
 import { Character } from '../types';
@@ -9,6 +9,7 @@ import GameMap from './GameMap';
 import DungeonShowcase from './DungeonShowcase';
 import CostumeShop from './CostumeShop';
 import Ranking from './Ranking';
+import ProfileImageUpload from './ProfileImageUpload';
 
 interface RPGLocationSystemProps {
   onLogout: () => void;
@@ -67,8 +68,18 @@ const RPGLocationSystem: React.FC<RPGLocationSystemProps> = ({ onLogout, userEma
   const [showCostumeShop, setShowCostumeShop] = useState(false);
   const [showRanking, setShowRanking] = useState(false);
   const [showDungeonList, setShowDungeonList] = useState(false);
+  const [showProfileImageUpload, setShowProfileImageUpload] = useState(false);
+  const [profileImage, setProfileImage] = useState<string>('');
 
   const [showLoginPrompt, setShowLoginPrompt] = useState(false);
+
+  // 프로필 이미지 로드
+  useEffect(() => {
+    const savedImage = localStorage.getItem('profileImage');
+    if (savedImage) {
+      setProfileImage(savedImage);
+    }
+  }, []);
 
   // 서버에서 캐릭터 정보 가져오기
   useEffect(() => {
@@ -535,32 +546,77 @@ const RPGLocationSystem: React.FC<RPGLocationSystemProps> = ({ onLogout, userEma
           </div>
         )}
 
-        {/* 캐릭터 스탯 카드 */}
+        {/* 캐릭터 프로필 카드 */}
         <div className="bg-white rounded-lg p-6 mb-6 border-4 border-yellow-400">
-          <div className="flex items-center justify-between mb-4">
-            <div>
-              <h2 className="text-2xl font-bold text-black flex items-center gap-2">
-                <Swords className="w-6 h-6 text-yellow-600" />
-                레벨 {stats.level} {bodyAnalysisResult ? bodyAnalysisResult.playStyle.split(' - ')[0] : '워킹 워리어'}
-              </h2>
+          <div className="flex items-center gap-4 mb-4">
+            {/* 프로필 아이콘 */}
+            <div className="relative">
+              <div 
+                className="w-20 h-20 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center border-4 border-yellow-300 shadow-lg cursor-pointer hover:shadow-xl transition-shadow overflow-hidden"
+                onClick={() => setShowProfileImageUpload(true)}
+              >
+                {profileImage ? (
+                  <img
+                    src={profileImage}
+                    alt="프로필"
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <div className="text-3xl">
+                    {bodyAnalysisResult ? getBodyTypeIcon(bodyAnalysisResult.bodyType) : '⚔️'}
+                  </div>
+                )}
+              </div>
+              
+              {/* 카메라 아이콘 */}
+              <button
+                onClick={() => setShowProfileImageUpload(true)}
+                className="absolute -bottom-1 -right-1 w-6 h-6 bg-blue-500 hover:bg-blue-600 rounded-full flex items-center justify-center border-2 border-white shadow-lg"
+                title="프로필 이미지 변경"
+              >
+                <Camera className="w-3 h-3 text-white" />
+              </button>
+              
+              {isTracking && (
+                <div className="absolute -top-1 -left-1 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center border-2 border-white">
+                  <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                </div>
+              )}
+            </div>
+            
+            {/* 캐릭터 정보 */}
+            <div className="flex-1">
+              <div className="flex items-center justify-between mb-2">
+                <h2 className="text-2xl font-bold text-black">
+                  레벨 {stats.level} {bodyAnalysisResult ? bodyAnalysisResult.playStyle.split(' - ')[0] : '워킹 워리어'}
+                </h2>
+                <div className="flex items-center gap-2">
+                  {isSubmitting && (
+                    <div className="bg-yellow-200 px-2 py-1 rounded text-xs text-black">
+                      전송 중...
+                    </div>
+                  )}
+                </div>
+              </div>
+              
               {bodyAnalysisResult && (
-                <p className="text-sm text-gray-600 mt-1">
+                <p className="text-sm text-gray-600 mb-2">
                   {bodyAnalysisResult.playStyle.split(' - ')[1]}
                 </p>
               )}
-            </div>
-            <div className="flex items-center gap-2">
-              {isTracking && (
-                <div className="flex items-center gap-2 bg-yellow-100 px-3 py-1 rounded-full border-2 border-yellow-300">
-                  <span className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></span>
-                  <span className="text-sm font-bold text-black">모험 중</span>
+              
+              {/* 걷기 경험치 표시 */}
+              <div className="bg-green-50 px-3 py-2 rounded-lg border border-green-200">
+                <div className="flex items-center gap-2">
+                  <div className="text-green-600 font-bold text-sm">걷기 경험치</div>
+                  <div className="text-green-700 font-bold">
+                    {Math.floor(((character?.totalWalkDistance || 0) + totalDistance) / 10)} XP
+                  </div>
                 </div>
-              )}
-              {isSubmitting && (
-                <div className="bg-yellow-200 px-2 py-1 rounded text-xs text-black">
-                  전송 중...
+                <div className="text-xs text-gray-600 mt-1">
+                  10m = 1 걷기 경험치 | 총 {((character?.totalWalkDistance || 0) + totalDistance).toFixed(0)}m 걸음
                 </div>
-              )}
+              </div>
             </div>
           </div>
 
@@ -568,7 +624,7 @@ const RPGLocationSystem: React.FC<RPGLocationSystemProps> = ({ onLogout, userEma
           {character && (
             <div className="mb-4">
               <div className="flex justify-between text-sm text-black mb-1">
-                <span>EXP</span>
+                <span>레벨 EXP</span>
                 <span>{character.exp} / {character.level * 100}</span>
               </div>
               <div className="w-full bg-yellow-200 rounded-full h-4 border-2 border-yellow-400">
@@ -580,34 +636,27 @@ const RPGLocationSystem: React.FC<RPGLocationSystemProps> = ({ onLogout, userEma
             </div>
           )}
 
-          {/* 스탯 */}
-          <div className="grid grid-cols-4 gap-4">
+          {/* 스탯 (3개로 축소, 코인 제거) */}
+          <div className="grid grid-cols-3 gap-4">
             <div className="flex items-center gap-2">
-              <Heart className="w-5 h-5 text-yellow-600" />
+              <Heart className="w-5 h-5 text-red-500" />
               <div>
                 <div className="text-xs text-black">체력</div>
                 <div className="text-lg font-bold text-black">{stats.stats.hp}</div>
               </div>
             </div>
             <div className="flex items-center gap-2">
-              <Zap className="w-5 h-5 text-yellow-600" />
+              <Zap className="w-5 h-5 text-orange-500" />
               <div>
                 <div className="text-xs text-black">공격력</div>
                 <div className="text-lg font-bold text-black">{stats.stats.attack}</div>
               </div>
             </div>
             <div className="flex items-center gap-2">
-              <Shield className="w-5 h-5 text-yellow-600" />
+              <Shield className="w-5 h-5 text-blue-500" />
               <div>
                 <div className="text-xs text-black">방어력</div>
                 <div className="text-lg font-bold text-black">{stats.stats.defense}</div>
-              </div>
-            </div>
-            <div className="flex items-center gap-2">
-              <ShoppingBag className="w-5 h-5 text-yellow-600" />
-              <div>
-                <div className="text-xs text-black">코인</div>
-                <div className="text-lg font-bold text-black">{((character as any)?.coins || 0).toLocaleString()}</div>
               </div>
             </div>
           </div>
@@ -615,23 +664,62 @@ const RPGLocationSystem: React.FC<RPGLocationSystemProps> = ({ onLogout, userEma
 
 
 
-        {/* 현재 퀘스트 */}
-        <div className="bg-white rounded-lg p-4 mb-6 border-4 border-yellow-400">
-          <div className="flex items-center gap-2 mb-3">
-            <Trophy className="w-5 h-5 text-yellow-600" />
-            <h3 className="font-bold text-black">진행 중인 퀘스트</h3>
-          </div>
-          <div className="space-y-2">
-            <div>
-              <div className="flex justify-between text-sm text-black mb-1">
-                <span>⚔️ 첫 걸음: 1km 걷기</span>
-                <span>{Math.min(100, (totalDistance / 1000) * 100).toFixed(0)}%</span>
+        {/* 걷기 진행 상황 - 더 눈에 띄게 */}
+        <div className="bg-gradient-to-r from-green-400 to-blue-500 rounded-lg p-6 mb-6 border-4 border-green-600 text-white">
+          <div className="flex items-center justify-between mb-4">
+            <div className="flex items-center gap-3">
+              <div className="bg-white rounded-full p-2">
+                <Trophy className="w-6 h-6 text-green-600" />
               </div>
-              <div className="w-full bg-yellow-200 rounded-full h-3 border-2 border-yellow-300">
-                <div
-                  className="bg-yellow-400 h-full rounded-full transition-all"
-                  style={{ width: `${Math.min(100, (totalDistance / 1000) * 100)}%` }}
-                ></div>
+              <div>
+                <h3 className="text-2xl font-bold">걷기 진행 상황</h3>
+                <p className="text-green-100">실시간 운동 추적</p>
+              </div>
+            </div>
+            {isTracking && (
+              <div className="flex items-center gap-2 bg-green-600 px-4 py-2 rounded-full">
+                <div className="w-3 h-3 bg-green-300 rounded-full animate-pulse"></div>
+                <span className="font-bold">추적 중</span>
+              </div>
+            )}
+          </div>
+          
+          {/* 총 걸은 거리 - 큰 글씨로 강조 */}
+          <div className="text-center mb-4">
+            <div className="text-5xl font-bold mb-2">
+              {((character?.totalWalkDistance || 0) + totalDistance / 1000).toFixed(2)}
+            </div>
+            <div className="text-xl font-bold text-green-100">킬로미터</div>
+            <div className="text-sm text-green-200 mt-1">
+              총 {Math.floor(((character?.totalWalkDistance || 0) + totalDistance))}미터 걸었습니다
+            </div>
+          </div>
+          
+          {/* 현재 세션 거리 */}
+          <div className="bg-white bg-opacity-20 rounded-lg p-4 mb-4">
+            <div className="flex justify-between items-center">
+              <span className="font-bold">현재 세션</span>
+              <span className="text-xl font-bold">{(totalDistance / 1000).toFixed(2)} km</span>
+            </div>
+            <div className="text-sm text-green-200 mt-1">
+              {totalDistance}m 이동 중
+            </div>
+          </div>
+          
+          {/* 1km 퀘스트 진행률 */}
+          <div className="space-y-2">
+            <div className="flex justify-between text-sm">
+              <span>⚔️ 첫 걸음: 1km 걷기</span>
+              <span>{Math.min(100, (((character?.totalWalkDistance || 0) + totalDistance) / 1000) * 100).toFixed(0)}%</span>
+            </div>
+            <div className="w-full bg-white bg-opacity-30 rounded-full h-4">
+              <div
+                className="bg-white h-full rounded-full transition-all duration-500 flex items-center justify-center"
+                style={{ width: `${Math.min(100, (((character?.totalWalkDistance || 0) + totalDistance) / 1000) * 100)}%` }}
+              >
+                {((character?.totalWalkDistance || 0) + totalDistance) >= 1000 && (
+                  <span className="text-green-600 font-bold text-xs">완료!</span>
+                )}
               </div>
             </div>
           </div>
@@ -755,7 +843,7 @@ const RPGLocationSystem: React.FC<RPGLocationSystemProps> = ({ onLogout, userEma
                 resetDistance();
                 // 서버의 걷기 거리도 초기화
                 if (userEmail !== 'demo@demo.com') {
-                  fetch('/api/location/reset', {
+                  fetch('http://localhost:3001/api/location/reset', {
                     method: 'POST',
                     headers: {
                       'Authorization': `Bearer ${localStorage.getItem('token')}`,
@@ -774,15 +862,41 @@ const RPGLocationSystem: React.FC<RPGLocationSystemProps> = ({ onLogout, userEma
             >
               🔄 전체 초기화
             </button>
-            {bodyAnalysisResult && (
-              <button
-                onClick={() => setShowAIAnalysis(true)}
-                className="bg-yellow-300 hover:bg-yellow-400 text-black font-bold py-2 px-4 rounded border-2 border-yellow-500 text-sm"
-              >
-                AI 재분석
-              </button>
-            )}
+            <button
+              onClick={async () => {
+                // 테스트용: 100m 걷기 시뮬레이션
+                try {
+                  const response = await fetch('http://localhost:3001/api/location/update', {
+                    method: 'POST',
+                    headers: {
+                      'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ distance: 100 })
+                  });
+                  const data = await response.json();
+                  console.log('✅ 100m 걷기 시뮬레이션:', data);
+                  alert(`🚶 100m 걸었습니다! 총 거리: ${(data.totalWalkDistance/1000).toFixed(2)}km`);
+                  // 페이지 새로고침하여 던전 상태 업데이트
+                  window.location.reload();
+                } catch (error) {
+                  console.error('❌ 걷기 시뮬레이션 실패:', error);
+                }
+              }}
+              className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded border-2 border-green-700 text-sm"
+            >
+              🚶 100m 걷기 테스트
+            </button>
           </div>
+          
+          {/* AI 재분석 버튼 */}
+          {bodyAnalysisResult && (
+            <button
+              onClick={() => setShowAIAnalysis(true)}
+              className="w-full mt-3 bg-yellow-300 hover:bg-yellow-400 text-black font-bold py-2 px-4 rounded border-2 border-yellow-500 text-sm"
+            >
+              AI 재분석
+            </button>
+          )}
         </div>
 
         {/* RPG 안내 */}
@@ -865,7 +979,10 @@ const RPGLocationSystem: React.FC<RPGLocationSystemProps> = ({ onLogout, userEma
 
       {/* 코스튬 상점 */}
       {showCostumeShop && (
-        <CostumeShop onClose={() => setShowCostumeShop(false)} />
+        <CostumeShop 
+          onClose={() => setShowCostumeShop(false)} 
+          walkingExp={Math.floor(((character?.totalWalkDistance || 0) + totalDistance) / 10)}
+        />
       )}
 
       {/* 랭킹 */}
@@ -1009,6 +1126,18 @@ const RPGLocationSystem: React.FC<RPGLocationSystemProps> = ({ onLogout, userEma
             </div>
           </div>
         </div>
+      )}
+
+      {/* 프로필 이미지 업로드 */}
+      {showProfileImageUpload && (
+        <ProfileImageUpload
+          currentImage={profileImage}
+          onImageChange={(imageUrl) => {
+            setProfileImage(imageUrl);
+            setShowProfileImageUpload(false);
+          }}
+          onClose={() => setShowProfileImageUpload(false)}
+        />
       )}
 
       {/* 로그인 필요 팝업 */}
