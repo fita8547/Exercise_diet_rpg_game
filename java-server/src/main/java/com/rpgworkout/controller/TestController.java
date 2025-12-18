@@ -3,6 +3,8 @@ package com.rpgworkout.controller;
 import com.rpgworkout.service.QuestService;
 import com.rpgworkout.service.ItemService;
 import com.rpgworkout.service.AchievementService;
+import com.rpgworkout.service.AIGoalService;
+import com.rpgworkout.service.PersonalizedAIService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.Map;
@@ -21,6 +23,12 @@ public class TestController {
     
     @Autowired
     private AchievementService achievementService;
+    
+    @Autowired
+    private AIGoalService aiGoalService;
+    
+    @Autowired
+    private PersonalizedAIService personalizedAIService;
     
     @GetMapping("/test")
     public Map<String, Object> test() {
@@ -414,5 +422,246 @@ public class TestController {
         response.put("dashboard", getDashboard(userEmail));
         
         return response;
+    }
+    
+    // AI 기반 개인화된 목표 계산
+    @PostMapping("/ai/calculate-goals")
+    public Map<String, Object> calculatePersonalizedGoals(@RequestBody Map<String, Object> userProfile) {
+        try {
+            Map<String, Object> goals = aiGoalService.calculatePersonalizedGoals(userProfile);
+            
+            Map<String, Object> response = new HashMap<>();
+            response.put("success", true);
+            response.put("message", "개인화된 목표가 계산되었습니다");
+            response.put("goals", goals);
+            
+            return response;
+        } catch (Exception e) {
+            Map<String, Object> response = new HashMap<>();
+            response.put("success", false);
+            response.put("error", "목표 계산 중 오류가 발생했습니다: " + e.getMessage());
+            return response;
+        }
+    }
+    
+    // 자동 던전 완료 체크
+    @PostMapping("/ai/check-auto-dungeons")
+    public Map<String, Object> checkAutoDungeonCompletion(@RequestBody Map<String, Object> request) {
+        try {
+            double totalWalkDistance = ((Number) request.get("totalWalkDistance")).doubleValue();
+            @SuppressWarnings("unchecked")
+            Map<String, Object> userProfile = (Map<String, Object>) request.get("userProfile");
+            
+            Map<String, Object> result = aiGoalService.checkAutoDungeonCompletion(totalWalkDistance, userProfile);
+            
+            Map<String, Object> response = new HashMap<>();
+            response.put("success", true);
+            response.put("message", "자동 던전 체크 완료");
+            response.put("result", result);
+            
+            return response;
+        } catch (Exception e) {
+            Map<String, Object> response = new HashMap<>();
+            response.put("success", false);
+            response.put("error", "자동 던전 체크 중 오류가 발생했습니다: " + e.getMessage());
+            return response;
+        }
+    }
+    
+    // 간단한 AI 분석 (기존 AI 분석과 통합)
+    @PostMapping("/ai/analyze-simple")
+    public Map<String, Object> analyzeUserSimple(@RequestBody Map<String, Object> userData) {
+        try {
+            // 기본 사용자 정보 추출
+            double height = ((Number) userData.getOrDefault("height", 170)).doubleValue();
+            double weight = ((Number) userData.getOrDefault("weight", 70)).doubleValue();
+            String activityLevel = (String) userData.getOrDefault("activityLevel", "moderate");
+            String goal = (String) userData.getOrDefault("goal", "fitness");
+            
+            // BMI 계산
+            double bmi = weight / Math.pow(height / 100, 2);
+            
+            // 체형 분류
+            String bodyType;
+            String playStyle;
+            if (bmi < 18.5) {
+                bodyType = "archer";
+                playStyle = "민첩한 궁수 - 가벼운 몸으로 꾸준한 걷기에 특화";
+            } else if (bmi < 25) {
+                bodyType = "warrior";
+                playStyle = "균형잡힌 전사 - 안정적인 체력으로 모든 활동에 적합";
+            } else if (bmi < 30) {
+                bodyType = "paladin";
+                playStyle = "든든한 성기사 - 강인한 체력으로 장거리 걷기 가능";
+            } else {
+                bodyType = "mage";
+                playStyle = "지혜로운 마법사 - 천천히 시작해서 꾸준히 성장";
+            }
+            
+            // 개인화된 목표 계산
+            Map<String, Object> goals = aiGoalService.calculatePersonalizedGoals(userData);
+            
+            Map<String, Object> response = new HashMap<>();
+            response.put("success", true);
+            response.put("bodyType", bodyType);
+            response.put("playStyle", playStyle);
+            response.put("bmi", Math.round(bmi * 10.0) / 10.0);
+            response.put("goals", goals);
+            response.put("recommendations", generateRecommendations(bodyType, activityLevel, goal));
+            
+            return response;
+        } catch (Exception e) {
+            Map<String, Object> response = new HashMap<>();
+            response.put("success", false);
+            response.put("error", "AI 분석 중 오류가 발생했습니다: " + e.getMessage());
+            return response;
+        }
+    }
+    
+    private java.util.List<String> generateRecommendations(String bodyType, String activityLevel, String goal) {
+        java.util.List<String> recommendations = new java.util.ArrayList<>();
+        
+        switch (bodyType) {
+            case "archer":
+                recommendations.add("가벼운 조깅과 빠른 걷기를 추천합니다");
+                recommendations.add("계단 오르기로 다리 근력을 강화하세요");
+                break;
+            case "warrior":
+                recommendations.add("꾸준한 속도로 장거리 걷기를 해보세요");
+                recommendations.add("인터벌 걷기로 체력을 향상시키세요");
+                break;
+            case "paladin":
+                recommendations.add("천천히 시작해서 점진적으로 거리를 늘려가세요");
+                recommendations.add("경사진 길 걷기로 근력을 강화하세요");
+                break;
+            case "mage":
+                recommendations.add("무리하지 말고 짧은 거리부터 시작하세요");
+                recommendations.add("규칙적인 걷기 습관을 만드는 것이 중요합니다");
+                break;
+        }
+        
+        if ("weight_loss".equals(goal)) {
+            recommendations.add("식후 30분 걷기를 추천합니다");
+        } else if ("health".equals(goal)) {
+            recommendations.add("스트레칭과 함께 걷기를 병행하세요");
+        }
+        
+        return recommendations;
+    }
+    
+    // 🤖 AI 기반 개인화된 게임 경험 생성
+    @PostMapping("/ai/personalize-game")
+    public Map<String, Object> personalizeGameExperience(@RequestBody Map<String, Object> userProfile) {
+        try {
+            System.out.println("🤖 AI 개인화 요청 받음: " + userProfile);
+            
+            // AI 기반 개인화된 게임 경험 생성
+            Map<String, Object> gameExperience = personalizedAIService.generatePersonalizedGameExperience(userProfile);
+            
+            System.out.println("✅ AI 개인화 완료");
+            return gameExperience;
+            
+        } catch (Exception e) {
+            System.err.println("❌ AI 개인화 실패: " + e.getMessage());
+            e.printStackTrace();
+            
+            Map<String, Object> response = new HashMap<>();
+            response.put("success", false);
+            response.put("error", "AI 개인화 중 오류가 발생했습니다: " + e.getMessage());
+            response.put("fallback", true);
+            
+            // 기본 게임 경험 제공
+            try {
+                Map<String, Object> defaultExperience = personalizedAIService.generatePersonalizedGameExperience(userProfile);
+                response.putAll(defaultExperience);
+                response.put("success", true);
+            } catch (Exception fallbackError) {
+                System.err.println("❌ 기본 경험 생성도 실패: " + fallbackError.getMessage());
+            }
+            
+            return response;
+        }
+    }
+    
+    // 🎯 AI 기반 실시간 게임 조정
+    @PostMapping("/ai/adjust-game")
+    public Map<String, Object> adjustGameDifficulty(@RequestBody Map<String, Object> request) {
+        try {
+            double currentProgress = ((Number) request.getOrDefault("currentProgress", 0.0)).doubleValue();
+            int completedDungeons = ((Number) request.getOrDefault("completedDungeons", 0)).intValue();
+            String playerBehavior = (String) request.getOrDefault("playerBehavior", "normal");
+            @SuppressWarnings("unchecked")
+            Map<String, Object> userProfile = (Map<String, Object>) request.get("userProfile");
+            
+            Map<String, Object> adjustments = new HashMap<>();
+            
+            // 진행도에 따른 난이도 조정
+            if (currentProgress > 0.8) {
+                adjustments.put("difficultyIncrease", 0.2);
+                adjustments.put("newChallenges", generateNewChallenges(userProfile));
+            } else if (currentProgress < 0.3) {
+                adjustments.put("difficultyDecrease", 0.1);
+                adjustments.put("encouragement", generateEncouragement(userProfile));
+            }
+            
+            // 플레이어 행동에 따른 조정
+            if ("inactive".equals(playerBehavior)) {
+                adjustments.put("motivationalBoosts", generateMotivationalBoosts());
+                adjustments.put("easierGoals", true);
+            } else if ("overactive".equals(playerBehavior)) {
+                adjustments.put("restRecommendation", true);
+                adjustments.put("balanceAdvice", "적절한 휴식도 중요합니다!");
+            }
+            
+            adjustments.put("success", true);
+            return adjustments;
+            
+        } catch (Exception e) {
+            Map<String, Object> response = new HashMap<>();
+            response.put("success", false);
+            response.put("error", "게임 조정 중 오류가 발생했습니다: " + e.getMessage());
+            return response;
+        }
+    }
+    
+    private java.util.List<Map<String, Object>> generateNewChallenges(Map<String, Object> userProfile) {
+        java.util.List<Map<String, Object>> challenges = new java.util.ArrayList<>();
+        
+        Map<String, Object> speedChallenge = new HashMap<>();
+        speedChallenge.put("name", "속도 도전");
+        speedChallenge.put("description", "평소보다 20% 빠르게 걷기");
+        speedChallenge.put("reward", Map.of("exp", 300, "item", "속도의 부츠"));
+        challenges.add(speedChallenge);
+        
+        Map<String, Object> enduranceChallenge = new HashMap<>();
+        enduranceChallenge.put("name", "지구력 테스트");
+        enduranceChallenge.put("description", "평소 목표의 150% 달성하기");
+        enduranceChallenge.put("reward", Map.of("exp", 500, "item", "지구력의 반지"));
+        challenges.add(enduranceChallenge);
+        
+        return challenges;
+    }
+    
+    private String generateEncouragement(Map<String, Object> userProfile) {
+        String personalityType = (String) userProfile.getOrDefault("personalityType", "수집가형");
+        
+        switch (personalityType) {
+            case "모험가형":
+                return "🌟 모험가여! 작은 걸음도 위대한 여정의 시작입니다!";
+            case "전략가형":
+                return "🎯 계획대로 천천히, 하지만 꾸준히 나아가고 있어요!";
+            case "탐험가형":
+                return "🗺️ 새로운 길을 개척하는 것은 시간이 걸리는 법이에요!";
+            default:
+                return "💪 당신만의 속도로 꾸준히 걸어가세요!";
+        }
+    }
+    
+    private java.util.List<String> generateMotivationalBoosts() {
+        java.util.List<String> boosts = new java.util.ArrayList<>();
+        boosts.add("🎁 오늘만 특별 보너스 경험치 2배!");
+        boosts.add("⭐ 작은 목표부터 시작해보세요 - 500m만 걸어도 보상이 있어요!");
+        boosts.add("🏆 연속 3일 걷기 달성 시 특별 아이템 증정!");
+        return boosts;
     }
 }

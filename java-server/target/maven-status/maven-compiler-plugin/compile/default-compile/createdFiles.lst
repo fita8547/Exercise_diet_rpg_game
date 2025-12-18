@@ -6,7 +6,9 @@ com/rpgworkout/controller/ItemController.class
 com/rpgworkout/model/Achievement.class
 com/rpgworkout/service/QuestService.class
 com/rpgworkout/model/Item$ItemEffect.class
+com/rpgworkout/service/AIGoalService.class
 com/rpgworkout/controller/TestController.class
+com/rpgworkout/service/PersonalizedAIService.class
 com/rpgworkout/model/Item.class
 com/rpgworkout/service/ItemService.class
 com/rpgworkout/model/Quest$QuestReward.class

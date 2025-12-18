@@ -4,3 +4,8 @@ server:
 logging:
   level:
     com.rpgworkout: INFO
+
+# OpenAI API 설정 (선택사항)
+openai:
+  api:
+    key: ${OPENAI_API_KEY:}  # 환경변수에서 읽어오거나 비워둠

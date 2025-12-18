@@ -1,11 +1,13 @@
-/Users/junsu/Documents/rpg/java-server/src/main/java/com/rpgworkout/service/AchievementService.java
 /Users/junsu/Documents/rpg/java-server/src/main/java/com/rpgworkout/RpgWorkoutApplication.java
 /Users/junsu/Documents/rpg/java-server/src/main/java/com/rpgworkout/controller/TestController.java
-/Users/junsu/Documents/rpg/java-server/src/main/java/com/rpgworkout/service/ItemService.java
 /Users/junsu/Documents/rpg/java-server/src/main/java/com/rpgworkout/model/Quest.java
 /Users/junsu/Documents/rpg/java-server/src/main/java/com/rpgworkout/service/QuestService.java
+/Users/junsu/Documents/rpg/java-server/src/main/java/com/rpgworkout/service/AIGoalService.java
+/Users/junsu/Documents/rpg/java-server/src/main/java/com/rpgworkout/controller/ItemController.java
+/Users/junsu/Documents/rpg/java-server/src/main/java/com/rpgworkout/service/AchievementService.java
+/Users/junsu/Documents/rpg/java-server/src/main/java/com/rpgworkout/service/ItemService.java
 /Users/junsu/Documents/rpg/java-server/src/main/java/com/rpgworkout/controller/QuestController.java
 /Users/junsu/Documents/rpg/java-server/src/main/java/com/rpgworkout/model/Achievement.java
 /Users/junsu/Documents/rpg/java-server/src/main/java/com/rpgworkout/model/Item.java
-/Users/junsu/Documents/rpg/java-server/src/main/java/com/rpgworkout/controller/ItemController.java
 /Users/junsu/Documents/rpg/java-server/src/main/java/com/rpgworkout/controller/AchievementController.java
+/Users/junsu/Documents/rpg/java-server/src/main/java/com/rpgworkout/service/PersonalizedAIService.java
