@@ -1,0 +1,7532 @@
+{
+  "user_001": {
+    "profile": {
+      "user_id": "user_001",
+      "age": 18,
+      "name": "민수",
+      "workout_goal": "체력향상",
+      "personality_type": "친근형"
+    },
+    "logs": [
+      {
+        "user_id": "user_001",
+        "date": "2025-12-07",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 5,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_001",
+        "date": "2025-12-08",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 18,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_001",
+        "date": "2025-12-09",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 0,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_001",
+        "date": "2025-12-10",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 0,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_001",
+        "date": "2025-12-11",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 2,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_001",
+        "date": "2025-12-12",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 3,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_001",
+        "date": "2025-12-13",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 12,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_001",
+        "date": "2025-12-14",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 12,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_001",
+        "date": "2025-12-15",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 20,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_001",
+        "date": "2025-12-16",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 17,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_001",
+        "date": "2025-12-17",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 4,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_001",
+        "date": "2025-12-18",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 5,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_001",
+        "date": "2025-12-19",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 24,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_001",
+        "date": "2025-12-20",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 1,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_001",
+        "date": "2025-12-21",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 12,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_001",
+        "date": "2025-12-22",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 12,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_001",
+        "date": "2025-12-23",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 16,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_001",
+        "date": "2025-12-24",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 2,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_001",
+        "date": "2025-12-25",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 13,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_001",
+        "date": "2025-12-26",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 4,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_001",
+        "date": "2025-12-27",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 1,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_001",
+        "date": "2025-12-28",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 0,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_001",
+        "date": "2025-12-29",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 16,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_001",
+        "date": "2025-12-30",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 15,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_001",
+        "date": "2025-12-31",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 4,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_001",
+        "date": "2026-01-01",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 20,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_001",
+        "date": "2026-01-02",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 1,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_001",
+        "date": "2026-01-03",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 21,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_001",
+        "date": "2026-01-04",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 13,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_001",
+        "date": "2026-01-05",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 1,
+        "condition_score": 5
+      }
+    ]
+  },
+  "user_002": {
+    "profile": {
+      "user_id": "user_002",
+      "age": 14,
+      "name": "지영",
+      "workout_goal": "체력향상",
+      "personality_type": "도전형"
+    },
+    "logs": [
+      {
+        "user_id": "user_002",
+        "date": "2025-12-07",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 18,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_002",
+        "date": "2025-12-08",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 23,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_002",
+        "date": "2025-12-09",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 16,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_002",
+        "date": "2025-12-10",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 22,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_002",
+        "date": "2025-12-11",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 15,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_002",
+        "date": "2025-12-12",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 9,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_002",
+        "date": "2025-12-13",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 24,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_002",
+        "date": "2025-12-14",
+        "workout_completed": true,
+        "difficulty": 4,
+        "duration_minutes": 21,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_002",
+        "date": "2025-12-15",
+        "workout_completed": false,
+        "difficulty": 4,
+        "duration_minutes": 5,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_002",
+        "date": "2025-12-16",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 19,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_002",
+        "date": "2025-12-17",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 11,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_002",
+        "date": "2025-12-18",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 15,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_002",
+        "date": "2025-12-19",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 20,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_002",
+        "date": "2025-12-20",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 12,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_002",
+        "date": "2025-12-21",
+        "workout_completed": false,
+        "difficulty": 4,
+        "duration_minutes": 3,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_002",
+        "date": "2025-12-22",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 23,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_002",
+        "date": "2025-12-23",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 15,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_002",
+        "date": "2025-12-24",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 20,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_002",
+        "date": "2025-12-25",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 10,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_002",
+        "date": "2025-12-26",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 0,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_002",
+        "date": "2025-12-27",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 27,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_002",
+        "date": "2025-12-28",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 5,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_002",
+        "date": "2025-12-29",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 19,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_002",
+        "date": "2025-12-30",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 0,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_002",
+        "date": "2025-12-31",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 18,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_002",
+        "date": "2026-01-01",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 20,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_002",
+        "date": "2026-01-02",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 2,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_002",
+        "date": "2026-01-03",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 2,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_002",
+        "date": "2026-01-04",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 18,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_002",
+        "date": "2026-01-05",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 18,
+        "condition_score": 4
+      }
+    ]
+  },
+  "user_003": {
+    "profile": {
+      "user_id": "user_003",
+      "age": 17,
+      "name": "현우",
+      "workout_goal": "다이어트",
+      "personality_type": "도전형"
+    },
+    "logs": [
+      {
+        "user_id": "user_003",
+        "date": "2025-12-07",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 13,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_003",
+        "date": "2025-12-08",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 24,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_003",
+        "date": "2025-12-09",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 20,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_003",
+        "date": "2025-12-10",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 23,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_003",
+        "date": "2025-12-11",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 13,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_003",
+        "date": "2025-12-12",
+        "workout_completed": true,
+        "difficulty": 4,
+        "duration_minutes": 26,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_003",
+        "date": "2025-12-13",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 16,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_003",
+        "date": "2025-12-14",
+        "workout_completed": true,
+        "difficulty": 4,
+        "duration_minutes": 28,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_003",
+        "date": "2025-12-15",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 12,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_003",
+        "date": "2025-12-16",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 16,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_003",
+        "date": "2025-12-17",
+        "workout_completed": true,
+        "difficulty": 4,
+        "duration_minutes": 19,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_003",
+        "date": "2025-12-18",
+        "workout_completed": true,
+        "difficulty": 5,
+        "duration_minutes": 17,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_003",
+        "date": "2025-12-19",
+        "workout_completed": true,
+        "difficulty": 5,
+        "duration_minutes": 31,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_003",
+        "date": "2025-12-20",
+        "workout_completed": false,
+        "difficulty": 5,
+        "duration_minutes": 3,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_003",
+        "date": "2025-12-21",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 18,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_003",
+        "date": "2025-12-22",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 5,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_003",
+        "date": "2025-12-23",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 3,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_003",
+        "date": "2025-12-24",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 21,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_003",
+        "date": "2025-12-25",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 24,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_003",
+        "date": "2025-12-26",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 20,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_003",
+        "date": "2025-12-27",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 8,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_003",
+        "date": "2025-12-28",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 20,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_003",
+        "date": "2025-12-29",
+        "workout_completed": true,
+        "difficulty": 4,
+        "duration_minutes": 29,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_003",
+        "date": "2025-12-30",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 20,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_003",
+        "date": "2025-12-31",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 11,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_003",
+        "date": "2026-01-01",
+        "workout_completed": true,
+        "difficulty": 4,
+        "duration_minutes": 20,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_003",
+        "date": "2026-01-02",
+        "workout_completed": true,
+        "difficulty": 4,
+        "duration_minutes": 30,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_003",
+        "date": "2026-01-03",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 19,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_003",
+        "date": "2026-01-04",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 19,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_003",
+        "date": "2026-01-05",
+        "workout_completed": true,
+        "difficulty": 4,
+        "duration_minutes": 18,
+        "condition_score": 3
+      }
+    ]
+  },
+  "user_004": {
+    "profile": {
+      "user_id": "user_004",
+      "age": 16,
+      "name": "서연",
+      "workout_goal": "건강관리",
+      "personality_type": "친근형"
+    },
+    "logs": [
+      {
+        "user_id": "user_004",
+        "date": "2025-12-07",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 17,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_004",
+        "date": "2025-12-08",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 15,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_004",
+        "date": "2025-12-09",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 1,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_004",
+        "date": "2025-12-10",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 28,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_004",
+        "date": "2025-12-11",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 19,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_004",
+        "date": "2025-12-12",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 25,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_004",
+        "date": "2025-12-13",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 21,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_004",
+        "date": "2025-12-14",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 3,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_004",
+        "date": "2025-12-15",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 0,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_004",
+        "date": "2025-12-16",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 1,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_004",
+        "date": "2025-12-17",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 19,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_004",
+        "date": "2025-12-18",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 18,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_004",
+        "date": "2025-12-19",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 14,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_004",
+        "date": "2025-12-20",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 9,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_004",
+        "date": "2025-12-21",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 19,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_004",
+        "date": "2025-12-22",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 0,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_004",
+        "date": "2025-12-23",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 5,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_004",
+        "date": "2025-12-24",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 11,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_004",
+        "date": "2025-12-25",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 3,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_004",
+        "date": "2025-12-26",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 21,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_004",
+        "date": "2025-12-27",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 0,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_004",
+        "date": "2025-12-28",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 15,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_004",
+        "date": "2025-12-29",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 12,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_004",
+        "date": "2025-12-30",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 14,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_004",
+        "date": "2025-12-31",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 2,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_004",
+        "date": "2026-01-01",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 2,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_004",
+        "date": "2026-01-02",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 16,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_004",
+        "date": "2026-01-03",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 0,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_004",
+        "date": "2026-01-04",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 3,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_004",
+        "date": "2026-01-05",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 10,
+        "condition_score": 5
+      }
+    ]
+  },
+  "user_005": {
+    "profile": {
+      "user_id": "user_005",
+      "age": 16,
+      "name": "준호",
+      "workout_goal": "스트레스해소",
+      "personality_type": "격려형"
+    },
+    "logs": [
+      {
+        "user_id": "user_005",
+        "date": "2025-12-07",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 2,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_005",
+        "date": "2025-12-08",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 14,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_005",
+        "date": "2025-12-09",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 19,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_005",
+        "date": "2025-12-10",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 5,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_005",
+        "date": "2025-12-11",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 4,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_005",
+        "date": "2025-12-12",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 4,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_005",
+        "date": "2025-12-13",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 6,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_005",
+        "date": "2025-12-14",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 20,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_005",
+        "date": "2025-12-15",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 4,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_005",
+        "date": "2025-12-16",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 5,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_005",
+        "date": "2025-12-17",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 5,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_005",
+        "date": "2025-12-18",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 3,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_005",
+        "date": "2025-12-19",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 7,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_005",
+        "date": "2025-12-20",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 17,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_005",
+        "date": "2025-12-21",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 5,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_005",
+        "date": "2025-12-22",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 12,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_005",
+        "date": "2025-12-23",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 4,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_005",
+        "date": "2025-12-24",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 14,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_005",
+        "date": "2025-12-25",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 11,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_005",
+        "date": "2025-12-26",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 10,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_005",
+        "date": "2025-12-27",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 4,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_005",
+        "date": "2025-12-28",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 18,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_005",
+        "date": "2025-12-29",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 2,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_005",
+        "date": "2025-12-30",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 6,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_005",
+        "date": "2025-12-31",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 8,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_005",
+        "date": "2026-01-01",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 4,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_005",
+        "date": "2026-01-02",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 18,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_005",
+        "date": "2026-01-03",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 12,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_005",
+        "date": "2026-01-04",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 22,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_005",
+        "date": "2026-01-05",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 5,
+        "condition_score": 2
+      }
+    ]
+  },
+  "user_006": {
+    "profile": {
+      "user_id": "user_006",
+      "age": 18,
+      "name": "예린",
+      "workout_goal": "근력증가",
+      "personality_type": "도전형"
+    },
+    "logs": [
+      {
+        "user_id": "user_006",
+        "date": "2025-12-07",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 17,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_006",
+        "date": "2025-12-08",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 2,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_006",
+        "date": "2025-12-09",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 5,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_006",
+        "date": "2025-12-10",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 5,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_006",
+        "date": "2025-12-11",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 2,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_006",
+        "date": "2025-12-12",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 16,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_006",
+        "date": "2025-12-13",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 11,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_006",
+        "date": "2025-12-14",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 17,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_006",
+        "date": "2025-12-15",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 19,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_006",
+        "date": "2025-12-16",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 15,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_006",
+        "date": "2025-12-17",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 23,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_006",
+        "date": "2025-12-18",
+        "workout_completed": true,
+        "difficulty": 4,
+        "duration_minutes": 22,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_006",
+        "date": "2025-12-19",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 8,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_006",
+        "date": "2025-12-20",
+        "workout_completed": true,
+        "difficulty": 4,
+        "duration_minutes": 19,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_006",
+        "date": "2025-12-21",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 10,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_006",
+        "date": "2025-12-22",
+        "workout_completed": false,
+        "difficulty": 5,
+        "duration_minutes": 2,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_006",
+        "date": "2025-12-23",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 18,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_006",
+        "date": "2025-12-24",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 2,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_006",
+        "date": "2025-12-25",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 12,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_006",
+        "date": "2025-12-26",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 3,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_006",
+        "date": "2025-12-27",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 2,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_006",
+        "date": "2025-12-28",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 20,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_006",
+        "date": "2025-12-29",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 12,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_006",
+        "date": "2025-12-30",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 4,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_006",
+        "date": "2025-12-31",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 3,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_006",
+        "date": "2026-01-01",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 5,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_006",
+        "date": "2026-01-02",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 13,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_006",
+        "date": "2026-01-03",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 2,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_006",
+        "date": "2026-01-04",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 17,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_006",
+        "date": "2026-01-05",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 1,
+        "condition_score": 4
+      }
+    ]
+  },
+  "user_007": {
+    "profile": {
+      "user_id": "user_007",
+      "age": 16,
+      "name": "태민",
+      "workout_goal": "다이어트",
+      "personality_type": "친근형"
+    },
+    "logs": [
+      {
+        "user_id": "user_007",
+        "date": "2025-12-07",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 1,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_007",
+        "date": "2025-12-08",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 3,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_007",
+        "date": "2025-12-09",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 0,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_007",
+        "date": "2025-12-10",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 18,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_007",
+        "date": "2025-12-11",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 18,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_007",
+        "date": "2025-12-12",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 4,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_007",
+        "date": "2025-12-13",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 24,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_007",
+        "date": "2025-12-14",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 3,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_007",
+        "date": "2025-12-15",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 3,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_007",
+        "date": "2025-12-16",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 17,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_007",
+        "date": "2025-12-17",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 0,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_007",
+        "date": "2025-12-18",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 5,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_007",
+        "date": "2025-12-19",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 5,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_007",
+        "date": "2025-12-20",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 10,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_007",
+        "date": "2025-12-21",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 18,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_007",
+        "date": "2025-12-22",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 24,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_007",
+        "date": "2025-12-23",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 5,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_007",
+        "date": "2025-12-24",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 2,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_007",
+        "date": "2025-12-25",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 14,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_007",
+        "date": "2025-12-26",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 21,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_007",
+        "date": "2025-12-27",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 2,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_007",
+        "date": "2025-12-28",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 5,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_007",
+        "date": "2025-12-29",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 5,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_007",
+        "date": "2025-12-30",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 9,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_007",
+        "date": "2025-12-31",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 2,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_007",
+        "date": "2026-01-01",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 4,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_007",
+        "date": "2026-01-02",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 4,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_007",
+        "date": "2026-01-03",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 3,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_007",
+        "date": "2026-01-04",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 15,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_007",
+        "date": "2026-01-05",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 18,
+        "condition_score": 4
+      }
+    ]
+  },
+  "user_008": {
+    "profile": {
+      "user_id": "user_008",
+      "age": 18,
+      "name": "소영",
+      "workout_goal": "건강관리",
+      "personality_type": "도전형"
+    },
+    "logs": [
+      {
+        "user_id": "user_008",
+        "date": "2025-12-07",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 18,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_008",
+        "date": "2025-12-08",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 14,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_008",
+        "date": "2025-12-09",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 1,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_008",
+        "date": "2025-12-10",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 3,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_008",
+        "date": "2025-12-11",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 11,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_008",
+        "date": "2025-12-12",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 20,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_008",
+        "date": "2025-12-13",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 9,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_008",
+        "date": "2025-12-14",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 25,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_008",
+        "date": "2025-12-15",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 16,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_008",
+        "date": "2025-12-16",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 19,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_008",
+        "date": "2025-12-17",
+        "workout_completed": true,
+        "difficulty": 4,
+        "duration_minutes": 30,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_008",
+        "date": "2025-12-18",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 21,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_008",
+        "date": "2025-12-19",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 23,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_008",
+        "date": "2025-12-20",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 17,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_008",
+        "date": "2025-12-21",
+        "workout_completed": true,
+        "difficulty": 4,
+        "duration_minutes": 28,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_008",
+        "date": "2025-12-22",
+        "workout_completed": true,
+        "difficulty": 4,
+        "duration_minutes": 30,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_008",
+        "date": "2025-12-23",
+        "workout_completed": true,
+        "difficulty": 4,
+        "duration_minutes": 18,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_008",
+        "date": "2025-12-24",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 5,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_008",
+        "date": "2025-12-25",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 16,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_008",
+        "date": "2025-12-26",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 4,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_008",
+        "date": "2025-12-27",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 23,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_008",
+        "date": "2025-12-28",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 18,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_008",
+        "date": "2025-12-29",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 21,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_008",
+        "date": "2025-12-30",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 3,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_008",
+        "date": "2025-12-31",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 14,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_008",
+        "date": "2026-01-01",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 16,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_008",
+        "date": "2026-01-02",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 2,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_008",
+        "date": "2026-01-03",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 15,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_008",
+        "date": "2026-01-04",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 16,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_008",
+        "date": "2026-01-05",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 15,
+        "condition_score": 3
+      }
+    ]
+  },
+  "user_009": {
+    "profile": {
+      "user_id": "user_009",
+      "age": 14,
+      "name": "동현",
+      "workout_goal": "건강관리",
+      "personality_type": "친근형"
+    },
+    "logs": [
+      {
+        "user_id": "user_009",
+        "date": "2025-12-07",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 4,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_009",
+        "date": "2025-12-08",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 3,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_009",
+        "date": "2025-12-09",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 4,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_009",
+        "date": "2025-12-10",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 2,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_009",
+        "date": "2025-12-11",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 0,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_009",
+        "date": "2025-12-12",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 0,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_009",
+        "date": "2025-12-13",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 1,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_009",
+        "date": "2025-12-14",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 21,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_009",
+        "date": "2025-12-15",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 13,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_009",
+        "date": "2025-12-16",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 1,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_009",
+        "date": "2025-12-17",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 20,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_009",
+        "date": "2025-12-18",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 20,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_009",
+        "date": "2025-12-19",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 14,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_009",
+        "date": "2025-12-20",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 1,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_009",
+        "date": "2025-12-21",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 9,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_009",
+        "date": "2025-12-22",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 1,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_009",
+        "date": "2025-12-23",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 10,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_009",
+        "date": "2025-12-24",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 2,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_009",
+        "date": "2025-12-25",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 4,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_009",
+        "date": "2025-12-26",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 2,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_009",
+        "date": "2025-12-27",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 7,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_009",
+        "date": "2025-12-28",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 5,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_009",
+        "date": "2025-12-29",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 3,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_009",
+        "date": "2025-12-30",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 12,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_009",
+        "date": "2025-12-31",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 3,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_009",
+        "date": "2026-01-01",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 10,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_009",
+        "date": "2026-01-02",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 21,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_009",
+        "date": "2026-01-03",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 1,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_009",
+        "date": "2026-01-04",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 22,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_009",
+        "date": "2026-01-05",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 19,
+        "condition_score": 4
+      }
+    ]
+  },
+  "user_010": {
+    "profile": {
+      "user_id": "user_010",
+      "age": 18,
+      "name": "하은",
+      "workout_goal": "체력향상",
+      "personality_type": "친근형"
+    },
+    "logs": [
+      {
+        "user_id": "user_010",
+        "date": "2025-12-07",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 0,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_010",
+        "date": "2025-12-08",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 20,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_010",
+        "date": "2025-12-09",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 26,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_010",
+        "date": "2025-12-10",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 3,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_010",
+        "date": "2025-12-11",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 2,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_010",
+        "date": "2025-12-12",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 4,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_010",
+        "date": "2025-12-13",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 17,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_010",
+        "date": "2025-12-14",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 0,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_010",
+        "date": "2025-12-15",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 10,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_010",
+        "date": "2025-12-16",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 0,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_010",
+        "date": "2025-12-17",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 3,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_010",
+        "date": "2025-12-18",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 26,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_010",
+        "date": "2025-12-19",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 4,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_010",
+        "date": "2025-12-20",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 11,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_010",
+        "date": "2025-12-21",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 4,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_010",
+        "date": "2025-12-22",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 5,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_010",
+        "date": "2025-12-23",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 9,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_010",
+        "date": "2025-12-24",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 21,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_010",
+        "date": "2025-12-25",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 20,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_010",
+        "date": "2025-12-26",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 16,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_010",
+        "date": "2025-12-27",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 28,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_010",
+        "date": "2025-12-28",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 19,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_010",
+        "date": "2025-12-29",
+        "workout_completed": true,
+        "difficulty": 4,
+        "duration_minutes": 21,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_010",
+        "date": "2025-12-30",
+        "workout_completed": true,
+        "difficulty": 4,
+        "duration_minutes": 20,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_010",
+        "date": "2025-12-31",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 23,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_010",
+        "date": "2026-01-01",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 10,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_010",
+        "date": "2026-01-02",
+        "workout_completed": true,
+        "difficulty": 5,
+        "duration_minutes": 24,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_010",
+        "date": "2026-01-03",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 0,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_010",
+        "date": "2026-01-04",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 20,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_010",
+        "date": "2026-01-05",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 8,
+        "condition_score": 3
+      }
+    ]
+  },
+  "user_011": {
+    "profile": {
+      "user_id": "user_011",
+      "age": 16,
+      "name": "성민",
+      "workout_goal": "체력향상",
+      "personality_type": "도전형"
+    },
+    "logs": [
+      {
+        "user_id": "user_011",
+        "date": "2025-12-07",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 13,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_011",
+        "date": "2025-12-08",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 9,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_011",
+        "date": "2025-12-09",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 8,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_011",
+        "date": "2025-12-10",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 12,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_011",
+        "date": "2025-12-11",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 19,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_011",
+        "date": "2025-12-12",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 16,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_011",
+        "date": "2025-12-13",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 22,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_011",
+        "date": "2025-12-14",
+        "workout_completed": true,
+        "difficulty": 4,
+        "duration_minutes": 27,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_011",
+        "date": "2025-12-15",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 20,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_011",
+        "date": "2025-12-16",
+        "workout_completed": true,
+        "difficulty": 4,
+        "duration_minutes": 30,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_011",
+        "date": "2025-12-17",
+        "workout_completed": true,
+        "difficulty": 5,
+        "duration_minutes": 31,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_011",
+        "date": "2025-12-18",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 19,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_011",
+        "date": "2025-12-19",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 24,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_011",
+        "date": "2025-12-20",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 20,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_011",
+        "date": "2025-12-21",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 0,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_011",
+        "date": "2025-12-22",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 5,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_011",
+        "date": "2025-12-23",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 17,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_011",
+        "date": "2025-12-24",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 8,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_011",
+        "date": "2025-12-25",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 0,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_011",
+        "date": "2025-12-26",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 16,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_011",
+        "date": "2025-12-27",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 6,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_011",
+        "date": "2025-12-28",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 15,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_011",
+        "date": "2025-12-29",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 0,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_011",
+        "date": "2025-12-30",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 27,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_011",
+        "date": "2025-12-31",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 17,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_011",
+        "date": "2026-01-01",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 14,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_011",
+        "date": "2026-01-02",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 17,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_011",
+        "date": "2026-01-03",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 22,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_011",
+        "date": "2026-01-04",
+        "workout_completed": false,
+        "difficulty": 4,
+        "duration_minutes": 2,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_011",
+        "date": "2026-01-05",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 0,
+        "condition_score": 2
+      }
+    ]
+  },
+  "user_012": {
+    "profile": {
+      "user_id": "user_012",
+      "age": 17,
+      "name": "유진",
+      "workout_goal": "체력향상",
+      "personality_type": "격려형"
+    },
+    "logs": [
+      {
+        "user_id": "user_012",
+        "date": "2025-12-07",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 23,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_012",
+        "date": "2025-12-08",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 2,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_012",
+        "date": "2025-12-09",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 16,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_012",
+        "date": "2025-12-10",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 9,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_012",
+        "date": "2025-12-11",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 4,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_012",
+        "date": "2025-12-12",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 21,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_012",
+        "date": "2025-12-13",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 3,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_012",
+        "date": "2025-12-14",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 5,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_012",
+        "date": "2025-12-15",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 2,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_012",
+        "date": "2025-12-16",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 14,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_012",
+        "date": "2025-12-17",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 2,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_012",
+        "date": "2025-12-18",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 16,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_012",
+        "date": "2025-12-19",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 4,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_012",
+        "date": "2025-12-20",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 3,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_012",
+        "date": "2025-12-21",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 5,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_012",
+        "date": "2025-12-22",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 27,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_012",
+        "date": "2025-12-23",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 4,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_012",
+        "date": "2025-12-24",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 25,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_012",
+        "date": "2025-12-25",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 0,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_012",
+        "date": "2025-12-26",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 0,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_012",
+        "date": "2025-12-27",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 2,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_012",
+        "date": "2025-12-28",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 2,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_012",
+        "date": "2025-12-29",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 19,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_012",
+        "date": "2025-12-30",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 1,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_012",
+        "date": "2025-12-31",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 2,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_012",
+        "date": "2026-01-01",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 24,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_012",
+        "date": "2026-01-02",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 1,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_012",
+        "date": "2026-01-03",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 0,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_012",
+        "date": "2026-01-04",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 19,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_012",
+        "date": "2026-01-05",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 1,
+        "condition_score": 3
+      }
+    ]
+  },
+  "user_013": {
+    "profile": {
+      "user_id": "user_013",
+      "age": 16,
+      "name": "재현",
+      "workout_goal": "건강관리",
+      "personality_type": "도전형"
+    },
+    "logs": [
+      {
+        "user_id": "user_013",
+        "date": "2025-12-07",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 5,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_013",
+        "date": "2025-12-08",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 1,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_013",
+        "date": "2025-12-09",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 9,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_013",
+        "date": "2025-12-10",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 0,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_013",
+        "date": "2025-12-11",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 1,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_013",
+        "date": "2025-12-12",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 5,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_013",
+        "date": "2025-12-13",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 5,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_013",
+        "date": "2025-12-14",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 3,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_013",
+        "date": "2025-12-15",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 2,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_013",
+        "date": "2025-12-16",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 17,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_013",
+        "date": "2025-12-17",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 1,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_013",
+        "date": "2025-12-18",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 22,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_013",
+        "date": "2025-12-19",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 3,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_013",
+        "date": "2025-12-20",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 4,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_013",
+        "date": "2025-12-21",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 3,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_013",
+        "date": "2025-12-22",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 8,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_013",
+        "date": "2025-12-23",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 1,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_013",
+        "date": "2025-12-24",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 3,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_013",
+        "date": "2025-12-25",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 13,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_013",
+        "date": "2025-12-26",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 2,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_013",
+        "date": "2025-12-27",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 11,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_013",
+        "date": "2025-12-28",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 9,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_013",
+        "date": "2025-12-29",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 3,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_013",
+        "date": "2025-12-30",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 13,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_013",
+        "date": "2025-12-31",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 3,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_013",
+        "date": "2026-01-01",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 18,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_013",
+        "date": "2026-01-02",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 4,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_013",
+        "date": "2026-01-03",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 5,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_013",
+        "date": "2026-01-04",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 1,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_013",
+        "date": "2026-01-05",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 4,
+        "condition_score": 2
+      }
+    ]
+  },
+  "user_014": {
+    "profile": {
+      "user_id": "user_014",
+      "age": 18,
+      "name": "나영",
+      "workout_goal": "건강관리",
+      "personality_type": "도전형"
+    },
+    "logs": [
+      {
+        "user_id": "user_014",
+        "date": "2025-12-07",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 22,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_014",
+        "date": "2025-12-08",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 2,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_014",
+        "date": "2025-12-09",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 17,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_014",
+        "date": "2025-12-10",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 18,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_014",
+        "date": "2025-12-11",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 13,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_014",
+        "date": "2025-12-12",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 10,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_014",
+        "date": "2025-12-13",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 13,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_014",
+        "date": "2025-12-14",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 14,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_014",
+        "date": "2025-12-15",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 11,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_014",
+        "date": "2025-12-16",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 18,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_014",
+        "date": "2025-12-17",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 11,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_014",
+        "date": "2025-12-18",
+        "workout_completed": true,
+        "difficulty": 4,
+        "duration_minutes": 24,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_014",
+        "date": "2025-12-19",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 14,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_014",
+        "date": "2025-12-20",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 24,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_014",
+        "date": "2025-12-21",
+        "workout_completed": true,
+        "difficulty": 4,
+        "duration_minutes": 15,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_014",
+        "date": "2025-12-22",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 25,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_014",
+        "date": "2025-12-23",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 21,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_014",
+        "date": "2025-12-24",
+        "workout_completed": true,
+        "difficulty": 5,
+        "duration_minutes": 35,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_014",
+        "date": "2025-12-25",
+        "workout_completed": true,
+        "difficulty": 5,
+        "duration_minutes": 18,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_014",
+        "date": "2025-12-26",
+        "workout_completed": false,
+        "difficulty": 5,
+        "duration_minutes": 2,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_014",
+        "date": "2025-12-27",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 18,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_014",
+        "date": "2025-12-28",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 23,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_014",
+        "date": "2025-12-29",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 4,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_014",
+        "date": "2025-12-30",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 10,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_014",
+        "date": "2025-12-31",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 15,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_014",
+        "date": "2026-01-01",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 18,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_014",
+        "date": "2026-01-02",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 0,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_014",
+        "date": "2026-01-03",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 4,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_014",
+        "date": "2026-01-04",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 2,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_014",
+        "date": "2026-01-05",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 16,
+        "condition_score": 4
+      }
+    ]
+  },
+  "user_015": {
+    "profile": {
+      "user_id": "user_015",
+      "age": 17,
+      "name": "승우",
+      "workout_goal": "다이어트",
+      "personality_type": "친근형"
+    },
+    "logs": [
+      {
+        "user_id": "user_015",
+        "date": "2025-12-07",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 2,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_015",
+        "date": "2025-12-08",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 13,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_015",
+        "date": "2025-12-09",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 25,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_015",
+        "date": "2025-12-10",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 2,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_015",
+        "date": "2025-12-11",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 17,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_015",
+        "date": "2025-12-12",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 26,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_015",
+        "date": "2025-12-13",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 10,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_015",
+        "date": "2025-12-14",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 10,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_015",
+        "date": "2025-12-15",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 13,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_015",
+        "date": "2025-12-16",
+        "workout_completed": true,
+        "difficulty": 4,
+        "duration_minutes": 18,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_015",
+        "date": "2025-12-17",
+        "workout_completed": false,
+        "difficulty": 4,
+        "duration_minutes": 4,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_015",
+        "date": "2025-12-18",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 18,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_015",
+        "date": "2025-12-19",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 15,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_015",
+        "date": "2025-12-20",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 3,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_015",
+        "date": "2025-12-21",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 13,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_015",
+        "date": "2025-12-22",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 8,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_015",
+        "date": "2025-12-23",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 22,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_015",
+        "date": "2025-12-24",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 7,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_015",
+        "date": "2025-12-25",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 11,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_015",
+        "date": "2025-12-26",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 16,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_015",
+        "date": "2025-12-27",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 23,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_015",
+        "date": "2025-12-28",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 17,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_015",
+        "date": "2025-12-29",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 23,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_015",
+        "date": "2025-12-30",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 20,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_015",
+        "date": "2025-12-31",
+        "workout_completed": false,
+        "difficulty": 5,
+        "duration_minutes": 3,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_015",
+        "date": "2026-01-01",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 20,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_015",
+        "date": "2026-01-02",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 13,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_015",
+        "date": "2026-01-03",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 16,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_015",
+        "date": "2026-01-04",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 26,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_015",
+        "date": "2026-01-05",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 7,
+        "condition_score": 4
+      }
+    ]
+  },
+  "user_016": {
+    "profile": {
+      "user_id": "user_016",
+      "age": 18,
+      "name": "다은",
+      "workout_goal": "체력향상",
+      "personality_type": "격려형"
+    },
+    "logs": [
+      {
+        "user_id": "user_016",
+        "date": "2025-12-07",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 5,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_016",
+        "date": "2025-12-08",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 21,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_016",
+        "date": "2025-12-09",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 22,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_016",
+        "date": "2025-12-10",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 0,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_016",
+        "date": "2025-12-11",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 4,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_016",
+        "date": "2025-12-12",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 13,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_016",
+        "date": "2025-12-13",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 17,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_016",
+        "date": "2025-12-14",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 16,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_016",
+        "date": "2025-12-15",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 17,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_016",
+        "date": "2025-12-16",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 23,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_016",
+        "date": "2025-12-17",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 26,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_016",
+        "date": "2025-12-18",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 12,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_016",
+        "date": "2025-12-19",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 18,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_016",
+        "date": "2025-12-20",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 1,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_016",
+        "date": "2025-12-21",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 16,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_016",
+        "date": "2025-12-22",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 13,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_016",
+        "date": "2025-12-23",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 24,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_016",
+        "date": "2025-12-24",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 4,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_016",
+        "date": "2025-12-25",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 24,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_016",
+        "date": "2025-12-26",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 20,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_016",
+        "date": "2025-12-27",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 22,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_016",
+        "date": "2025-12-28",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 29,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_016",
+        "date": "2025-12-29",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 13,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_016",
+        "date": "2025-12-30",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 22,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_016",
+        "date": "2025-12-31",
+        "workout_completed": true,
+        "difficulty": 4,
+        "duration_minutes": 19,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_016",
+        "date": "2026-01-01",
+        "workout_completed": true,
+        "difficulty": 4,
+        "duration_minutes": 15,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_016",
+        "date": "2026-01-02",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 2,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_016",
+        "date": "2026-01-03",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 17,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_016",
+        "date": "2026-01-04",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 17,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_016",
+        "date": "2026-01-05",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 3,
+        "condition_score": 3
+      }
+    ]
+  },
+  "user_017": {
+    "profile": {
+      "user_id": "user_017",
+      "age": 14,
+      "name": "건우",
+      "workout_goal": "다이어트",
+      "personality_type": "격려형"
+    },
+    "logs": [
+      {
+        "user_id": "user_017",
+        "date": "2025-12-07",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 14,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_017",
+        "date": "2025-12-08",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 1,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_017",
+        "date": "2025-12-09",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 0,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_017",
+        "date": "2025-12-10",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 14,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_017",
+        "date": "2025-12-11",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 2,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_017",
+        "date": "2025-12-12",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 3,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_017",
+        "date": "2025-12-13",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 2,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_017",
+        "date": "2025-12-14",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 23,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_017",
+        "date": "2025-12-15",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 4,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_017",
+        "date": "2025-12-16",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 5,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_017",
+        "date": "2025-12-17",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 6,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_017",
+        "date": "2025-12-18",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 17,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_017",
+        "date": "2025-12-19",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 5,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_017",
+        "date": "2025-12-20",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 1,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_017",
+        "date": "2025-12-21",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 10,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_017",
+        "date": "2025-12-22",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 17,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_017",
+        "date": "2025-12-23",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 14,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_017",
+        "date": "2025-12-24",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 3,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_017",
+        "date": "2025-12-25",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 19,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_017",
+        "date": "2025-12-26",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 3,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_017",
+        "date": "2025-12-27",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 4,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_017",
+        "date": "2025-12-28",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 15,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_017",
+        "date": "2025-12-29",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 4,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_017",
+        "date": "2025-12-30",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 12,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_017",
+        "date": "2025-12-31",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 12,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_017",
+        "date": "2026-01-01",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 3,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_017",
+        "date": "2026-01-02",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 2,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_017",
+        "date": "2026-01-03",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 1,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_017",
+        "date": "2026-01-04",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 1,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_017",
+        "date": "2026-01-05",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 3,
+        "condition_score": 1
+      }
+    ]
+  },
+  "user_018": {
+    "profile": {
+      "user_id": "user_018",
+      "age": 17,
+      "name": "채원",
+      "workout_goal": "근력증가",
+      "personality_type": "격려형"
+    },
+    "logs": [
+      {
+        "user_id": "user_018",
+        "date": "2025-12-07",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 20,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_018",
+        "date": "2025-12-08",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 1,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_018",
+        "date": "2025-12-09",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 26,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_018",
+        "date": "2025-12-10",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 22,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_018",
+        "date": "2025-12-11",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 1,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_018",
+        "date": "2025-12-12",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 22,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_018",
+        "date": "2025-12-13",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 9,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_018",
+        "date": "2025-12-14",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 0,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_018",
+        "date": "2025-12-15",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 2,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_018",
+        "date": "2025-12-16",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 25,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_018",
+        "date": "2025-12-17",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 1,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_018",
+        "date": "2025-12-18",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 21,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_018",
+        "date": "2025-12-19",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 0,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_018",
+        "date": "2025-12-20",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 14,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_018",
+        "date": "2025-12-21",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 7,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_018",
+        "date": "2025-12-22",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 18,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_018",
+        "date": "2025-12-23",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 19,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_018",
+        "date": "2025-12-24",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 10,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_018",
+        "date": "2025-12-25",
+        "workout_completed": false,
+        "difficulty": 4,
+        "duration_minutes": 3,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_018",
+        "date": "2025-12-26",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 6,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_018",
+        "date": "2025-12-27",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 26,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_018",
+        "date": "2025-12-28",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 2,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_018",
+        "date": "2025-12-29",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 3,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_018",
+        "date": "2025-12-30",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 23,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_018",
+        "date": "2025-12-31",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 24,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_018",
+        "date": "2026-01-01",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 18,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_018",
+        "date": "2026-01-02",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 21,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_018",
+        "date": "2026-01-03",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 0,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_018",
+        "date": "2026-01-04",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 16,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_018",
+        "date": "2026-01-05",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 4,
+        "condition_score": 4
+      }
+    ]
+  },
+  "user_019": {
+    "profile": {
+      "user_id": "user_019",
+      "age": 14,
+      "name": "시우",
+      "workout_goal": "다이어트",
+      "personality_type": "친근형"
+    },
+    "logs": [
+      {
+        "user_id": "user_019",
+        "date": "2025-12-07",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 15,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_019",
+        "date": "2025-12-08",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 2,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_019",
+        "date": "2025-12-09",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 20,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_019",
+        "date": "2025-12-10",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 2,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_019",
+        "date": "2025-12-11",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 23,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_019",
+        "date": "2025-12-12",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 2,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_019",
+        "date": "2025-12-13",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 9,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_019",
+        "date": "2025-12-14",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 9,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_019",
+        "date": "2025-12-15",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 16,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_019",
+        "date": "2025-12-16",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 5,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_019",
+        "date": "2025-12-17",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 12,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_019",
+        "date": "2025-12-18",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 1,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_019",
+        "date": "2025-12-19",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 23,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_019",
+        "date": "2025-12-20",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 2,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_019",
+        "date": "2025-12-21",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 4,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_019",
+        "date": "2025-12-22",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 2,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_019",
+        "date": "2025-12-23",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 21,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_019",
+        "date": "2025-12-24",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 15,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_019",
+        "date": "2025-12-25",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 2,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_019",
+        "date": "2025-12-26",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 4,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_019",
+        "date": "2025-12-27",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 20,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_019",
+        "date": "2025-12-28",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 20,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_019",
+        "date": "2025-12-29",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 9,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_019",
+        "date": "2025-12-30",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 16,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_019",
+        "date": "2025-12-31",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 16,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_019",
+        "date": "2026-01-01",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 3,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_019",
+        "date": "2026-01-02",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 19,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_019",
+        "date": "2026-01-03",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 13,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_019",
+        "date": "2026-01-04",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 5,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_019",
+        "date": "2026-01-05",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 4,
+        "condition_score": 2
+      }
+    ]
+  },
+  "user_020": {
+    "profile": {
+      "user_id": "user_020",
+      "age": 19,
+      "name": "수빈",
+      "workout_goal": "체력향상",
+      "personality_type": "도전형"
+    },
+    "logs": [
+      {
+        "user_id": "user_020",
+        "date": "2025-12-07",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 23,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_020",
+        "date": "2025-12-08",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 2,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_020",
+        "date": "2025-12-09",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 9,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_020",
+        "date": "2025-12-10",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 1,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_020",
+        "date": "2025-12-11",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 0,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_020",
+        "date": "2025-12-12",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 18,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_020",
+        "date": "2025-12-13",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 2,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_020",
+        "date": "2025-12-14",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 19,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_020",
+        "date": "2025-12-15",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 12,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_020",
+        "date": "2025-12-16",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 16,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_020",
+        "date": "2025-12-17",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 11,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_020",
+        "date": "2025-12-18",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 2,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_020",
+        "date": "2025-12-19",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 20,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_020",
+        "date": "2025-12-20",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 12,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_020",
+        "date": "2025-12-21",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 13,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_020",
+        "date": "2025-12-22",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 5,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_020",
+        "date": "2025-12-23",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 1,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_020",
+        "date": "2025-12-24",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 17,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_020",
+        "date": "2025-12-25",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 5,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_020",
+        "date": "2025-12-26",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 10,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_020",
+        "date": "2025-12-27",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 8,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_020",
+        "date": "2025-12-28",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 0,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_020",
+        "date": "2025-12-29",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 1,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_020",
+        "date": "2025-12-30",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 9,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_020",
+        "date": "2025-12-31",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 2,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_020",
+        "date": "2026-01-01",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 9,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_020",
+        "date": "2026-01-02",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 5,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_020",
+        "date": "2026-01-03",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 14,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_020",
+        "date": "2026-01-04",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 14,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_020",
+        "date": "2026-01-05",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 1,
+        "condition_score": 2
+      }
+    ]
+  },
+  "user_021": {
+    "profile": {
+      "user_id": "user_021",
+      "age": 19,
+      "name": "도윤",
+      "workout_goal": "스트레스해소",
+      "personality_type": "친근형"
+    },
+    "logs": [
+      {
+        "user_id": "user_021",
+        "date": "2025-12-07",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 0,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_021",
+        "date": "2025-12-08",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 5,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_021",
+        "date": "2025-12-09",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 5,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_021",
+        "date": "2025-12-10",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 4,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_021",
+        "date": "2025-12-11",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 11,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_021",
+        "date": "2025-12-12",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 2,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_021",
+        "date": "2025-12-13",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 5,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_021",
+        "date": "2025-12-14",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 11,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_021",
+        "date": "2025-12-15",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 2,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_021",
+        "date": "2025-12-16",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 5,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_021",
+        "date": "2025-12-17",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 1,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_021",
+        "date": "2025-12-18",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 16,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_021",
+        "date": "2025-12-19",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 5,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_021",
+        "date": "2025-12-20",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 12,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_021",
+        "date": "2025-12-21",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 12,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_021",
+        "date": "2025-12-22",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 3,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_021",
+        "date": "2025-12-23",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 5,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_021",
+        "date": "2025-12-24",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 0,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_021",
+        "date": "2025-12-25",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 19,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_021",
+        "date": "2025-12-26",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 0,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_021",
+        "date": "2025-12-27",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 2,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_021",
+        "date": "2025-12-28",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 5,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_021",
+        "date": "2025-12-29",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 5,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_021",
+        "date": "2025-12-30",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 3,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_021",
+        "date": "2025-12-31",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 8,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_021",
+        "date": "2026-01-01",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 4,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_021",
+        "date": "2026-01-02",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 0,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_021",
+        "date": "2026-01-03",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 1,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_021",
+        "date": "2026-01-04",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 18,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_021",
+        "date": "2026-01-05",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 1,
+        "condition_score": 3
+      }
+    ]
+  },
+  "user_022": {
+    "profile": {
+      "user_id": "user_022",
+      "age": 17,
+      "name": "아린",
+      "workout_goal": "건강관리",
+      "personality_type": "도전형"
+    },
+    "logs": [
+      {
+        "user_id": "user_022",
+        "date": "2025-12-07",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 20,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_022",
+        "date": "2025-12-08",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 19,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_022",
+        "date": "2025-12-09",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 11,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_022",
+        "date": "2025-12-10",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 3,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_022",
+        "date": "2025-12-11",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 20,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_022",
+        "date": "2025-12-12",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 5,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_022",
+        "date": "2025-12-13",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 9,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_022",
+        "date": "2025-12-14",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 8,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_022",
+        "date": "2025-12-15",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 1,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_022",
+        "date": "2025-12-16",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 0,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_022",
+        "date": "2025-12-17",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 20,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_022",
+        "date": "2025-12-18",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 13,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_022",
+        "date": "2025-12-19",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 19,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_022",
+        "date": "2025-12-20",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 23,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_022",
+        "date": "2025-12-21",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 16,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_022",
+        "date": "2025-12-22",
+        "workout_completed": true,
+        "difficulty": 4,
+        "duration_minutes": 22,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_022",
+        "date": "2025-12-23",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 23,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_022",
+        "date": "2025-12-24",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 0,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_022",
+        "date": "2025-12-25",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 19,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_022",
+        "date": "2025-12-26",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 5,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_022",
+        "date": "2025-12-27",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 21,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_022",
+        "date": "2025-12-28",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 3,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_022",
+        "date": "2025-12-29",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 3,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_022",
+        "date": "2025-12-30",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 15,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_022",
+        "date": "2025-12-31",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 15,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_022",
+        "date": "2026-01-01",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 14,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_022",
+        "date": "2026-01-02",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 8,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_022",
+        "date": "2026-01-03",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 0,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_022",
+        "date": "2026-01-04",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 0,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_022",
+        "date": "2026-01-05",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 11,
+        "condition_score": 3
+      }
+    ]
+  },
+  "user_023": {
+    "profile": {
+      "user_id": "user_023",
+      "age": 14,
+      "name": "준서",
+      "workout_goal": "스트레스해소",
+      "personality_type": "격려형"
+    },
+    "logs": [
+      {
+        "user_id": "user_023",
+        "date": "2025-12-07",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 9,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_023",
+        "date": "2025-12-08",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 10,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_023",
+        "date": "2025-12-09",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 11,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_023",
+        "date": "2025-12-10",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 20,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_023",
+        "date": "2025-12-11",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 5,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_023",
+        "date": "2025-12-12",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 13,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_023",
+        "date": "2025-12-13",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 0,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_023",
+        "date": "2025-12-14",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 12,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_023",
+        "date": "2025-12-15",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 13,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_023",
+        "date": "2025-12-16",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 1,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_023",
+        "date": "2025-12-17",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 13,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_023",
+        "date": "2025-12-18",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 23,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_023",
+        "date": "2025-12-19",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 2,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_023",
+        "date": "2025-12-20",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 22,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_023",
+        "date": "2025-12-21",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 17,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_023",
+        "date": "2025-12-22",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 5,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_023",
+        "date": "2025-12-23",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 9,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_023",
+        "date": "2025-12-24",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 4,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_023",
+        "date": "2025-12-25",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 0,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_023",
+        "date": "2025-12-26",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 5,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_023",
+        "date": "2025-12-27",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 21,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_023",
+        "date": "2025-12-28",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 17,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_023",
+        "date": "2025-12-29",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 5,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_023",
+        "date": "2025-12-30",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 4,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_023",
+        "date": "2025-12-31",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 24,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_023",
+        "date": "2026-01-01",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 15,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_023",
+        "date": "2026-01-02",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 14,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_023",
+        "date": "2026-01-03",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 19,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_023",
+        "date": "2026-01-04",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 10,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_023",
+        "date": "2026-01-05",
+        "workout_completed": false,
+        "difficulty": 4,
+        "duration_minutes": 4,
+        "condition_score": 5
+      }
+    ]
+  },
+  "user_024": {
+    "profile": {
+      "user_id": "user_024",
+      "age": 15,
+      "name": "윤서",
+      "workout_goal": "체력향상",
+      "personality_type": "도전형"
+    },
+    "logs": [
+      {
+        "user_id": "user_024",
+        "date": "2025-12-07",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 17,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_024",
+        "date": "2025-12-08",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 18,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_024",
+        "date": "2025-12-09",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 3,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_024",
+        "date": "2025-12-10",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 23,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_024",
+        "date": "2025-12-11",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 10,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_024",
+        "date": "2025-12-12",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 20,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_024",
+        "date": "2025-12-13",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 1,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_024",
+        "date": "2025-12-14",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 12,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_024",
+        "date": "2025-12-15",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 19,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_024",
+        "date": "2025-12-16",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 10,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_024",
+        "date": "2025-12-17",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 4,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_024",
+        "date": "2025-12-18",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 15,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_024",
+        "date": "2025-12-19",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 0,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_024",
+        "date": "2025-12-20",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 19,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_024",
+        "date": "2025-12-21",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 16,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_024",
+        "date": "2025-12-22",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 6,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_024",
+        "date": "2025-12-23",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 23,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_024",
+        "date": "2025-12-24",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 19,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_024",
+        "date": "2025-12-25",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 0,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_024",
+        "date": "2025-12-26",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 0,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_024",
+        "date": "2025-12-27",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 2,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_024",
+        "date": "2025-12-28",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 19,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_024",
+        "date": "2025-12-29",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 14,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_024",
+        "date": "2025-12-30",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 10,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_024",
+        "date": "2025-12-31",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 0,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_024",
+        "date": "2026-01-01",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 3,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_024",
+        "date": "2026-01-02",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 4,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_024",
+        "date": "2026-01-03",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 16,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_024",
+        "date": "2026-01-04",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 16,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_024",
+        "date": "2026-01-05",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 23,
+        "condition_score": 5
+      }
+    ]
+  },
+  "user_025": {
+    "profile": {
+      "user_id": "user_025",
+      "age": 19,
+      "name": "하준",
+      "workout_goal": "건강관리",
+      "personality_type": "격려형"
+    },
+    "logs": [
+      {
+        "user_id": "user_025",
+        "date": "2025-12-07",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 5,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_025",
+        "date": "2025-12-08",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 21,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_025",
+        "date": "2025-12-09",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 11,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_025",
+        "date": "2025-12-10",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 5,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_025",
+        "date": "2025-12-11",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 5,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_025",
+        "date": "2025-12-12",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 1,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_025",
+        "date": "2025-12-13",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 24,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_025",
+        "date": "2025-12-14",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 15,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_025",
+        "date": "2025-12-15",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 9,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_025",
+        "date": "2025-12-16",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 18,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_025",
+        "date": "2025-12-17",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 1,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_025",
+        "date": "2025-12-18",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 1,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_025",
+        "date": "2025-12-19",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 5,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_025",
+        "date": "2025-12-20",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 5,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_025",
+        "date": "2025-12-21",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 1,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_025",
+        "date": "2025-12-22",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 12,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_025",
+        "date": "2025-12-23",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 3,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_025",
+        "date": "2025-12-24",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 12,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_025",
+        "date": "2025-12-25",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 2,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_025",
+        "date": "2025-12-26",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 0,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_025",
+        "date": "2025-12-27",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 3,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_025",
+        "date": "2025-12-28",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 5,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_025",
+        "date": "2025-12-29",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 3,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_025",
+        "date": "2025-12-30",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 3,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_025",
+        "date": "2025-12-31",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 4,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_025",
+        "date": "2026-01-01",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 8,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_025",
+        "date": "2026-01-02",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 14,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_025",
+        "date": "2026-01-03",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 6,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_025",
+        "date": "2026-01-04",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 15,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_025",
+        "date": "2026-01-05",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 0,
+        "condition_score": 1
+      }
+    ]
+  },
+  "user_026": {
+    "profile": {
+      "user_id": "user_026",
+      "age": 19,
+      "name": "지우",
+      "workout_goal": "체력향상",
+      "personality_type": "격려형"
+    },
+    "logs": [
+      {
+        "user_id": "user_026",
+        "date": "2025-12-07",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 8,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_026",
+        "date": "2025-12-08",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 10,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_026",
+        "date": "2025-12-09",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 3,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_026",
+        "date": "2025-12-10",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 21,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_026",
+        "date": "2025-12-11",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 23,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_026",
+        "date": "2025-12-12",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 1,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_026",
+        "date": "2025-12-13",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 20,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_026",
+        "date": "2025-12-14",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 9,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_026",
+        "date": "2025-12-15",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 9,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_026",
+        "date": "2025-12-16",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 13,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_026",
+        "date": "2025-12-17",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 15,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_026",
+        "date": "2025-12-18",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 15,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_026",
+        "date": "2025-12-19",
+        "workout_completed": true,
+        "difficulty": 4,
+        "duration_minutes": 16,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_026",
+        "date": "2025-12-20",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 17,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_026",
+        "date": "2025-12-21",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 20,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_026",
+        "date": "2025-12-22",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 4,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_026",
+        "date": "2025-12-23",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 13,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_026",
+        "date": "2025-12-24",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 24,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_026",
+        "date": "2025-12-25",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 19,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_026",
+        "date": "2025-12-26",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 18,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_026",
+        "date": "2025-12-27",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 15,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_026",
+        "date": "2025-12-28",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 13,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_026",
+        "date": "2025-12-29",
+        "workout_completed": true,
+        "difficulty": 4,
+        "duration_minutes": 19,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_026",
+        "date": "2025-12-30",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 14,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_026",
+        "date": "2025-12-31",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 10,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_026",
+        "date": "2026-01-01",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 15,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_026",
+        "date": "2026-01-02",
+        "workout_completed": true,
+        "difficulty": 5,
+        "duration_minutes": 29,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_026",
+        "date": "2026-01-03",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 18,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_026",
+        "date": "2026-01-04",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 23,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_026",
+        "date": "2026-01-05",
+        "workout_completed": true,
+        "difficulty": 5,
+        "duration_minutes": 30,
+        "condition_score": 5
+      }
+    ]
+  },
+  "user_027": {
+    "profile": {
+      "user_id": "user_027",
+      "age": 14,
+      "name": "민준",
+      "workout_goal": "스트레스해소",
+      "personality_type": "도전형"
+    },
+    "logs": [
+      {
+        "user_id": "user_027",
+        "date": "2025-12-07",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 22,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_027",
+        "date": "2025-12-08",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 2,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_027",
+        "date": "2025-12-09",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 13,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_027",
+        "date": "2025-12-10",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 21,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_027",
+        "date": "2025-12-11",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 6,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_027",
+        "date": "2025-12-12",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 5,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_027",
+        "date": "2025-12-13",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 15,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_027",
+        "date": "2025-12-14",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 10,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_027",
+        "date": "2025-12-15",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 4,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_027",
+        "date": "2025-12-16",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 20,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_027",
+        "date": "2025-12-17",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 15,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_027",
+        "date": "2025-12-18",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 5,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_027",
+        "date": "2025-12-19",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 14,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_027",
+        "date": "2025-12-20",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 13,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_027",
+        "date": "2025-12-21",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 15,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_027",
+        "date": "2025-12-22",
+        "workout_completed": false,
+        "difficulty": 4,
+        "duration_minutes": 1,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_027",
+        "date": "2025-12-23",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 21,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_027",
+        "date": "2025-12-24",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 6,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_027",
+        "date": "2025-12-25",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 4,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_027",
+        "date": "2025-12-26",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 4,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_027",
+        "date": "2025-12-27",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 10,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_027",
+        "date": "2025-12-28",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 10,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_027",
+        "date": "2025-12-29",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 8,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_027",
+        "date": "2025-12-30",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 17,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_027",
+        "date": "2025-12-31",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 15,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_027",
+        "date": "2026-01-01",
+        "workout_completed": false,
+        "difficulty": 4,
+        "duration_minutes": 4,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_027",
+        "date": "2026-01-02",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 0,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_027",
+        "date": "2026-01-03",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 19,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_027",
+        "date": "2026-01-04",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 21,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_027",
+        "date": "2026-01-05",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 3,
+        "condition_score": 3
+      }
+    ]
+  },
+  "user_028": {
+    "profile": {
+      "user_id": "user_028",
+      "age": 14,
+      "name": "서현",
+      "workout_goal": "체력향상",
+      "personality_type": "분석형"
+    },
+    "logs": [
+      {
+        "user_id": "user_028",
+        "date": "2025-12-07",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 21,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_028",
+        "date": "2025-12-08",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 20,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_028",
+        "date": "2025-12-09",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 1,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_028",
+        "date": "2025-12-10",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 2,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_028",
+        "date": "2025-12-11",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 24,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_028",
+        "date": "2025-12-12",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 3,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_028",
+        "date": "2025-12-13",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 11,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_028",
+        "date": "2025-12-14",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 20,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_028",
+        "date": "2025-12-15",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 2,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_028",
+        "date": "2025-12-16",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 0,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_028",
+        "date": "2025-12-17",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 16,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_028",
+        "date": "2025-12-18",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 15,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_028",
+        "date": "2025-12-19",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 7,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_028",
+        "date": "2025-12-20",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 20,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_028",
+        "date": "2025-12-21",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 3,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_028",
+        "date": "2025-12-22",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 25,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_028",
+        "date": "2025-12-23",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 12,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_028",
+        "date": "2025-12-24",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 9,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_028",
+        "date": "2025-12-25",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 10,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_028",
+        "date": "2025-12-26",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 15,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_028",
+        "date": "2025-12-27",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 4,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_028",
+        "date": "2025-12-28",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 7,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_028",
+        "date": "2025-12-29",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 19,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_028",
+        "date": "2025-12-30",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 14,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_028",
+        "date": "2025-12-31",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 0,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_028",
+        "date": "2026-01-01",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 16,
+        "condition_score": 5
+      },
+      {
+        "user_id": "user_028",
+        "date": "2026-01-02",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 11,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_028",
+        "date": "2026-01-03",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 21,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_028",
+        "date": "2026-01-04",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 20,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_028",
+        "date": "2026-01-05",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 3,
+        "condition_score": 5
+      }
+    ]
+  },
+  "user_029": {
+    "profile": {
+      "user_id": "user_029",
+      "age": 17,
+      "name": "예준",
+      "workout_goal": "스트레스해소",
+      "personality_type": "도전형"
+    },
+    "logs": [
+      {
+        "user_id": "user_029",
+        "date": "2025-12-07",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 15,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_029",
+        "date": "2025-12-08",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 1,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_029",
+        "date": "2025-12-09",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 0,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_029",
+        "date": "2025-12-10",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 5,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_029",
+        "date": "2025-12-11",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 16,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_029",
+        "date": "2025-12-12",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 1,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_029",
+        "date": "2025-12-13",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 14,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_029",
+        "date": "2025-12-14",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 22,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_029",
+        "date": "2025-12-15",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 2,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_029",
+        "date": "2025-12-16",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 12,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_029",
+        "date": "2025-12-17",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 18,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_029",
+        "date": "2025-12-18",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 1,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_029",
+        "date": "2025-12-19",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 4,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_029",
+        "date": "2025-12-20",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 5,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_029",
+        "date": "2025-12-21",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 17,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_029",
+        "date": "2025-12-22",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 25,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_029",
+        "date": "2025-12-23",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 3,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_029",
+        "date": "2025-12-24",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 13,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_029",
+        "date": "2025-12-25",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 18,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_029",
+        "date": "2025-12-26",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 1,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_029",
+        "date": "2025-12-27",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 2,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_029",
+        "date": "2025-12-28",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 4,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_029",
+        "date": "2025-12-29",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 18,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_029",
+        "date": "2025-12-30",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 16,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_029",
+        "date": "2025-12-31",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 2,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_029",
+        "date": "2026-01-01",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 17,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_029",
+        "date": "2026-01-02",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 21,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_029",
+        "date": "2026-01-03",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 5,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_029",
+        "date": "2026-01-04",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 2,
+        "condition_score": 1
+      },
+      {
+        "user_id": "user_029",
+        "date": "2026-01-05",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 5,
+        "condition_score": 1
+      }
+    ]
+  },
+  "user_030": {
+    "profile": {
+      "user_id": "user_030",
+      "age": 16,
+      "name": "지민",
+      "workout_goal": "다이어트",
+      "personality_type": "친근형"
+    },
+    "logs": [
+      {
+        "user_id": "user_030",
+        "date": "2025-12-07",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 19,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_030",
+        "date": "2025-12-08",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 24,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_030",
+        "date": "2025-12-09",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 3,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_030",
+        "date": "2025-12-10",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 1,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_030",
+        "date": "2025-12-11",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 17,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_030",
+        "date": "2025-12-12",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 5,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_030",
+        "date": "2025-12-13",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 14,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_030",
+        "date": "2025-12-14",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 14,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_030",
+        "date": "2025-12-15",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 1,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_030",
+        "date": "2025-12-16",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 2,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_030",
+        "date": "2025-12-17",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 18,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_030",
+        "date": "2025-12-18",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 2,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_030",
+        "date": "2025-12-19",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 7,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_030",
+        "date": "2025-12-20",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 24,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_030",
+        "date": "2025-12-21",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 6,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_030",
+        "date": "2025-12-22",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 3,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_030",
+        "date": "2025-12-23",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 16,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_030",
+        "date": "2025-12-24",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 5,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_030",
+        "date": "2025-12-25",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 1,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_030",
+        "date": "2025-12-26",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 13,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_030",
+        "date": "2025-12-27",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 17,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_030",
+        "date": "2025-12-28",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 5,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_030",
+        "date": "2025-12-29",
+        "workout_completed": true,
+        "difficulty": 3,
+        "duration_minutes": 16,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_030",
+        "date": "2025-12-30",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 4,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_030",
+        "date": "2025-12-31",
+        "workout_completed": true,
+        "difficulty": 2,
+        "duration_minutes": 16,
+        "condition_score": 3
+      },
+      {
+        "user_id": "user_030",
+        "date": "2026-01-01",
+        "workout_completed": true,
+        "difficulty": 1,
+        "duration_minutes": 14,
+        "condition_score": 4
+      },
+      {
+        "user_id": "user_030",
+        "date": "2026-01-02",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 3,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_030",
+        "date": "2026-01-03",
+        "workout_completed": false,
+        "difficulty": 1,
+        "duration_minutes": 0,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_030",
+        "date": "2026-01-04",
+        "workout_completed": false,
+        "difficulty": 3,
+        "duration_minutes": 0,
+        "condition_score": 2
+      },
+      {
+        "user_id": "user_030",
+        "date": "2026-01-05",
+        "workout_completed": false,
+        "difficulty": 2,
+        "duration_minutes": 1,
+        "condition_score": 3
+      }
+    ]
+  }
+}
